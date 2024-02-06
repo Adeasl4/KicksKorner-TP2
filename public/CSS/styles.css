@@ -93,11 +93,12 @@ p {
 }
 
 .table-container {
-    width: 70%;
+    width: 85%;
 }
 
-.form-container {
-    width: 30%;
+.btn-container {
+    width: 15%;
+    text-align: center;
 }
 
 .delete-container {
@@ -134,10 +135,11 @@ p {
 
 .delete-btn,
 .submit-btn,
-.update-btn {
+.update-btn,
+.add-btn {
     padding: 8px 16px;
-    background-color: #000;
-    color: #ffffff;
+    background-color: #fcd12a;
+    color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
