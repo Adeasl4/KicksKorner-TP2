@@ -25,6 +25,9 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
         ]);
 
+        // Hash the password
+        $validatedData['password'] = bcrypt($validatedData['password']);
+
         // Create a new user record in the database
         $users = User::create($validatedData);
 
@@ -55,6 +58,9 @@ class UserController extends Controller
             'password' => 'required',
             'email' => 'required|email',
         ]);
+
+        // Hash the password
+        $validatedData['password'] = bcrypt($validatedData['password']);
 
         // Retrieve the user data using the provided user ID
         $user = User::find($validatedData['user_id']);
