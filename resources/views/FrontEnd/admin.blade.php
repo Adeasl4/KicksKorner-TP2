@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
-        <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
-        <title>Admin Panel</title>
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
+            <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+            <title>Admin Panel</title>
+    </head>
 <body>
 <div class="container">
   <div class="table-container">
@@ -35,53 +36,89 @@
         </tr>
         @endforeach
     </table>
-    <div class="delete-container">
-        <br><button type="submit" class="delete-btn">Delete Selected Customers</button>
+</div>
+
+<!-- Add, edit and delete buttons-->
+  <div class="btn-container">
+  <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addCustomerModal">
+  Add Customer
+  </button>
+  <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#updateCustomerModal">
+  Update Customer
+  </button>
+  <br><br><button type="submit" class="delete-btn">Delete Selected Customers</button>
+    </form>
+  </div>
+
+  <!-- Modal for adding a new customer -->
+<div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="addCustomerModalLabel">Add Customer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <!-- The form -->
+        <form method="POST" action="{{ route('users.store') }}" class="styled-form">
+          @csrf 
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required><br><br>
+          
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required><br><br>
+          
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required><br><br>
+          
+          <button type="submit" class="submit-btn">Add Customer</button>
+        </form>
+      </div>
     </div>
-  </form>
-  </div>
-  <div class="form-container">
-    <!--Add customer form - enter customer data-->
-    <p>Add customer</p>
-  <form method="POST" action="{{ route('users.store') }}" class="styled-form"> <!--Use store method in usercontroller-->
-        @csrf 
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br><br>
-        
-        <button type="submit" class="submit-btn">Add Customer</button>
-    </form>
-
-    <div>
-    <p>Update Customer Information</p>
-    <!--Update customer data form - enter ID to be updated and information-->
-    <form action="{{ route('users.update') }}" method="POST"> <!--Use update function in usercontroller-->
-        @csrf
-        @method('PUT')
-
-        <label for="user_id">User ID:</label>
-        <input type="text" name="user_id" required><br><br>
-
-        <label for="name">Name:</label>
-        <input type="text" name="name" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br><br>
-
-        <button type="submit" class="update-btn">Update Information</button>
-    </form>
-</div>
-
   </div>
 </div>
+
+<div class="modal fade" id="updateCustomerModal" tabindex="-1" role="dialog" aria-labelledby="updateCustomerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateCustomerModalLabel">Update Customer Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <!-- The form -->
+        <form action="{{ route('users.update') }}" method="POST" class="styled-form">
+          @csrf
+          @method('PUT')
+
+          <label for="user_id">User ID:</label>
+          <input type="text" name="user_id" required><br><br>
+
+          <label for="name">Name:</label>
+          <input type="text" name="name" required><br><br>
+
+          <label for="password">Password:</label>
+          <input type="password" name="password" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" required><br><br>
+
+          <button type="submit" class="update-btn">Update Information</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
     <div class="footer">
                 <p>Follow Us!</p>
                 <div class="socials">
@@ -92,5 +129,7 @@
                 </div>
                 <p>Made With &#x1FA75; By Team 36</p>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
