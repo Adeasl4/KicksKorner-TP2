@@ -91,17 +91,17 @@
                         <h1>Contact Us</h1>
                     </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br>
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br>
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu<br>
-                        fugiat nulla pariatur.
+                        Welcome to our Contact Us page! Whether you have questions, feedback, or simply want to get in touch,<br> 
+                        you're in the right place. Fill out the form below or give us a call, and we'll be happy to assist<br>
+                        you. Your feedback is valuable to us, and we look forward to hearing from you.
+                        
                     </p>
                 </div>
             </div>
             <div class="cards">
                 <div class="card">
                     <h1>PHONE</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                    <p>Need to speak with us directly? Here are our contact numbers:</p>
                     <ul>
                         <li>24/7 Customer Support</li>
                         <li>Local no. - <i class="fa fa-solid fa fa-phone" style="color: #000000;"></i> +44 7543678976</li>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="card">
                     <h1>EMAIL</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                    <p>Get in contact! Fill out the form below to reach us, and we'll reply as soon as possible.</p>
                     <button class="buttons" type="button" id="popup">Email Us!</button>
                     <p>Alternatively, email us at - KicksKorner@gmail.com</p>
                 </div>
