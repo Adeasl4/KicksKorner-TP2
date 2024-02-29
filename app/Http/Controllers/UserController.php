@@ -32,7 +32,7 @@ class UserController extends Controller
         $users = User::create($validatedData);
 
         // Or redirect
-        return redirect('/users')->with('success', 'User added successfully!');
+        return redirect('/admin')->with('success', 'User added successfully!');
     }
 
 
@@ -43,9 +43,9 @@ class UserController extends Controller
         //if not empty then delete selected customers
         if (!empty($selectedUsers)) {
             DB::table('users')->whereIn('id', $selectedUsers)->delete();
-            return redirect('/users')->with('success', 'Selected users deleted successfully!');
+            return redirect('/admin')->with('success', 'Selected users deleted successfully!');
         } else {//nothing selected
-            return redirect('/users')->with('error', 'No users selected for deletion!');
+            return redirect('/admin')->with('error', 'No users selected for deletion!');
         }
     }
 

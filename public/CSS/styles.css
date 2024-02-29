@@ -136,11 +136,22 @@ p {
 .delete-btn,
 .submit-btn,
 .update-btn,
-.add-btn {
+.add-btn,
+.process-btn,
+.manage-btn {
     padding: 8px 16px;
     background-color: #fcd12a;
     color: black;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.delete-btn:hover,
+.submit-btn:hover,
+.update-btn:hover,
+.add-btn:hover,
+.process-btn:hover,
+.manage-btn:hover {
+    background-color: #e0c52f; /* Change background color on hover */
 }

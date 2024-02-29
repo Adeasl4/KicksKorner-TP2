@@ -38,7 +38,7 @@
     </table>
 </div>
 
-<!-- Add, edit and delete buttons-->
+<!-- Add, edit, delete, processing orders, and inventory managament buttons-->
   <div class="btn-container">
   <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addCustomerModal">
   Add Customer
@@ -48,6 +48,12 @@
   </button>
   <br><br><button type="submit" class="delete-btn">Delete Selected Customers</button>
     </form>
+  <br><br><button type="button" class="process-btn" >
+  <a style="color:black;" href="{{ route('process.orders') }}">Process Orders</a>
+  </button>
+  <br><br><button type="button" class="manage-btn" href="">
+  <a style="color:black;" href="{{ route('inventory.management') }}">Inventory Management</a>
+  </button>
   </div>
 
   <!-- Modal for adding a new customer -->

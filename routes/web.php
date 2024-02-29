@@ -39,11 +39,19 @@ Route::get('/contact', [TemplateController::class,'contact']);
 Route::get('/welcome', [TemplateController::class,'welcome']);
 //Route::get('/dashboard', [TemplateController::class,'dashboard']);
 //Route::get('/navigation-menu', [TemplateController::class,'navigation-menu']);
+
 //Routes for Admin page
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProcessController;
+use App\Http\Controllers\InventoryController;
 
 Route::get('/admin', [UserController::class, 'show']); //Show main admin page
 Route::post('/admin/store', [UserController::class, 'store'])->name('users.store'); //Store data
 Route::delete('/admin/deleteSelected', [UserController::class, 'deleteSelected'])->name('users.deleteSelected'); //Delete data
 Route::put('/admin/update', [UserController::class, 'update'])->name('users.update'); //Update data
+
+Route::get('/process-orders', [ProcessController::class, 'index'])->name('process.orders');
+Route::get('/inventory-management', [InventoryController::class, 'index'])->name('inventory.management');
+
+
 
