@@ -13,6 +13,7 @@
     <table class="styled-table">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Image</th>
                 <th>Name</th>
                 <th>Description</th>
@@ -23,6 +24,7 @@
         <tbody>
             @foreach ($products as $product)
                 <tr>
+                    <td>{{ $product->id }}</td>
                     <td>
                         @if ($product->image_url)
                             <img src="{{ $product->image_url }}" alt="Product Image" style="max-width: 100px;">
@@ -39,9 +41,105 @@
         </tbody>
     </table>
 
+    <!--buttons-->
+    <div class="btn-container">
+        <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addProductModal">
+            Add Product
+        </button>
+        <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#updateProductModal">
+            Update Product
+        </button>
+    </div>
+
+    <!-- Modal for adding a new product -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <!-- Modal header -->
+        <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">Add Product</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+            <!-- The form -->
+            <form method="POST" action="{{ route('inventory.store') }}" class="styled-form">
+            @csrf 
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required><br><br>
+          
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description" required><br><br>
+          
+            <label for="price">Price:</label>
+            <input type="number" name="price" id="price" required><br><br>
+
+            <label for="units_in_stock">Stock:</label>
+            <input type="number" name="units_in_stock" id="units_in_stock" required><br><br>
+
+            <label for="image_url">Image URL:</label>
+            <input type="text" name="image_url" id="image_ul" required><br><br>
+            
+            <button type="submit" class="submit-btn">Add Product</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="updateProductModal" tabindex="-1" role="dialog" aria-labelledby="updateProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <!-- Modal header -->
+        <div class="modal-header">
+            <h5 class="modal-title" id="updateProductModalLabel">Update Product Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+            <!-- The form -->
+            <form action="{{ route('inventory.update') }}" method="POST" class="styled-form">
+            @csrf
+            @method('PUT')
+
+            <label for="product_id">Product ID:</label>
+            <input type="text" name="product_id" required><br><br>
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" required><br><br>
+
+            <label for="description">Description:</label>
+            <input type="text" name="description" id="description" required><br><br>
+          
+            <label for="price">Price:</label>
+            <input type="number" name="price" id="price" required><br><br>
+
+            <label for="units_in_stock">Stock:</label>
+            <input type="number" name="units_in_stock" id="units_in_stock" required><br><br>
+
+            <label for="image_url">Image URL:</label>
+            <input type="text" name="image_url" id="image_ul" required><br><br>
+
+            <button type="submit" class="update-btn">Update Information</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+
 
 <!--Footer-->
     <div class="footer">
+        <button type="button" class="manage-btn">
+            <a style="color:black;" href="{{ route('home.page') }}">Home</a>
+        </button>
+        <br><button type="button" class="manage-btn">
+            <a style="color:black;" href="{{ route('admin.page') }}">Admin Panel</a>
+        </button>
                 <p>Follow Us!</p>
                 <div class="socials">
                     <a class="socials-button" href="https://www.instagram.com"><i class="fa fa-brands fa fa-instagram" style="color: #D62976;"></i></a>

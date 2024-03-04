@@ -28,7 +28,7 @@ Route::middleware([
 });
 
 
-Route::get('/', [TemplateController::class,'index']);
+Route::get('/', [TemplateController::class,'index'])->name('home.page');
 Route::get('/about', [TemplateController::class,'about']);
 Route::get('/rate', [TemplateController::class,'rate']);
 Route::get('/checkout', [TemplateController::class,'checkout']);
@@ -45,13 +45,16 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\InventoryController;
 
-Route::get('/admin', [UserController::class, 'show']); //Show main admin page
+Route::get('/admin', [UserController::class, 'show'])->name('admin.page'); //Show main admin page
 Route::post('/admin/store', [UserController::class, 'store'])->name('users.store'); //Store data
 Route::delete('/admin/deleteSelected', [UserController::class, 'deleteSelected'])->name('users.deleteSelected'); //Delete data
 Route::put('/admin/update', [UserController::class, 'update'])->name('users.update'); //Update data
 
 Route::get('/process-orders', [ProcessController::class, 'index'])->name('process.orders');
+
 Route::get('/inventory-management', [InventoryController::class, 'index'])->name('inventory.management');
+Route::post('/inventory-management/store', [InventoryController::class, 'store'])->name('inventory.store'); //Store data
+Route::put('/inventory-management/update', [InventoryController::class, 'update'])->name('inventory.update'); //Update data
 
 
 

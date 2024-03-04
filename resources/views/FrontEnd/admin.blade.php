@@ -51,7 +51,7 @@
   <br><br><button type="button" class="process-btn" >
   <a style="color:black;" href="{{ route('process.orders') }}">Process Orders</a>
   </button>
-  <br><br><button type="button" class="manage-btn" href="">
+  <br><br><button type="button" class="manage-btn">
   <a style="color:black;" href="{{ route('inventory.management') }}">Inventory Management</a>
   </button>
   </div>
@@ -126,6 +126,9 @@
 
 <!--Footer-->
     <div class="footer">
+      <button type="button" class="manage-btn">
+      <a style="color:black;" href="{{ route('home.page') }}">Home</a>
+      </button>
                 <p>Follow Us!</p>
                 <div class="socials">
                     <a class="socials-button" href="https://www.instagram.com"><i class="fa fa-brands fa fa-instagram" style="color: #D62976;"></i></a>
