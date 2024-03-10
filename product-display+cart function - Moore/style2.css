@@ -77,7 +77,7 @@ header .icon-cart span {
 }
 
 .listProduct .item {
-    background-color: rgb(234, 232, 230);
+    background-color: rgb(250, 250, 250);
 
 
 }
@@ -88,6 +88,7 @@ header .icon-cart span {
     font-size: small;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 12px;
+    color: #3a3a3a;
 }
 
 .listProduct .item .price {
@@ -202,4 +203,48 @@ body.showCart .container {
 
 .listCart {
     overflow: auto;
+}
+
+
+
+.footer {
+    background-color: #0b0b0b;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+ul {
+
+    list-style-type: none;
+    color: rgb(227, 227, 227);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+    padding-right: 17px;
+    list-style-type: none;
+}
+
+.f1 li {
+    padding-top: 10px;
+}
+
+.f1 li:hover {
+    color: #3a3a3a;
+}
+
+.f2 li {
+    padding-top: 10px;
+}
+
+.f2 li:hover {
+    color: #3a3a3a;
+}
+
+.f3 img {
+    padding-top: 10px;
+    width: 20px;
+    display: inline-block;
 }
