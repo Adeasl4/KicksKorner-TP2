@@ -55,6 +55,9 @@ Route::get('/process-orders', [ProcessController::class, 'index'])->name('proces
 Route::get('/inventory-management', [InventoryController::class, 'index'])->name('inventory.management');
 Route::post('/inventory-management/store', [InventoryController::class, 'store'])->name('inventory.store'); //Store data
 Route::put('/inventory-management/update', [InventoryController::class, 'update'])->name('inventory.update'); //Update data
+Route::delete('/inventory-management/delete', [InventoryController::class, 'delete'])->name('inventory.delete'); //Delete data
+Route::get('/inventory-management/search', [InventoryController::class, 'search'])->name('inventory.search'); //Search
+
 
 
 

@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta charset="UTF-8">
+            <link rel="shortcut icon" href="Images/logo-png.png" type="image/x-icon">
             <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
             <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
@@ -10,51 +11,70 @@
             <title>Admin Panel</title>
     </head>
 <body>
+
+<div class="nav">
+                <ul>
+                    <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
+                    <li>
+                        <ul>
+                            <li class="underline">
+                                <a href="{{ route('home.page') }}">Back to Store</a>
+                            </li>
+                            <li class="underline">
+                                <a href="{{ route('admin.page') }}">Customer Data</a>
+                            </li>
+                            <li class="underline">
+                                <a href="{{ route('inventory.management') }}">Inventory Management</a>
+                            </li>
+                            <li class="underline">
+                                <a href="{{ route('process.orders') }}">Process Orders</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+<h1>Customer Data</h1>
 <div class="container">
   <div class="table-container">
-  <form action="{{ route('users.deleteSelected') }}" method="POST"> <!--Use delete method in usercontroller-->
-    @csrf
-    @method('DELETE')
-    <table class="styled-table">
-        <!--Table of all information from table-->
-        <br>
-        <tr>
+    <form action="{{ route('users.deleteSelected') }}" method="POST"> <!--Use delete method in usercontroller-->
+      @csrf
+      @method('DELETE')
+      <table class="styled-table">
+          <!--Table of all information from table-->
+          <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Password</th>
             <th>Email</th>
             <th>Delete?</th>
-        </tr>
-        @foreach($users as $user)
-        <tr>
+          </tr>
+          @foreach($users as $user)
+          <tr>
             <td>{{ $user->id }}</td>
             <td>{{ $user->name }}</td>
             <td>{{ $user->password }}</td>
             <td>{{ $user->email }}</td>
-            <!--Checkbox at the last column-->
-            <td><input type="checkbox" name="selectedUsers[]" value="{{ $user->id }}"></td>
+            <!--<td><input type="checkbox" name="selectedUsers[]" value="{{ $user->id }}"></td>-->
+            <!-- delete button for row-->
+            <td><button type="submit" class="delete-btn" name="selectedUsers[]" value="{{ $user->id }}">Delete</button></td>
+    </form>
         </tr>
         @endforeach
     </table>
-</div>
-
-<!-- Add, edit, delete, processing orders, and inventory managament buttons-->
-  <div class="btn-container">
-  <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addCustomerModal">
-  Add Customer
-  </button>
-  <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#updateCustomerModal">
-  Update Customer
-  </button>
-  <br><br><button type="submit" class="delete-btn">Delete Selected Customers</button>
-    </form>
-  <br><br><button type="button" class="process-btn" >
-  <a style="color:black;" href="{{ route('process.orders') }}">Process Orders</a>
-  </button>
-  <br><br><button type="button" class="manage-btn">
-  <a style="color:black;" href="{{ route('inventory.management') }}">Inventory Management</a>
-  </button>
   </div>
+
+    <!-- Add, edit, processing orders, and inventory managament buttons-->
+  <div class="btn-container">
+    <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addCustomerModal">
+      Add Customer
+    </button>
+    <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#updateCustomerModal">
+      Update Customer
+    </button>
+  </div>
+
+</div>
 
   <!-- Modal for adding a new customer -->
 <div class="modal fade" id="addCustomerModal" tabindex="-1" role="dialog" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
@@ -124,19 +144,16 @@
   </div>
 </div>
 
-<!--Footer-->
-    <div class="footer">
-      <button type="button" class="manage-btn">
-      <a style="color:black;" href="{{ route('home.page') }}">Home</a>
-      </button>
-                <p>Follow Us!</p>
-                <div class="socials">
-                    <a class="socials-button" href="https://www.instagram.com"><i class="fa fa-brands fa fa-instagram" style="color: #D62976;"></i></a>
-                    <a class="socials-button" href="https://www.linkedin.com/"><i class="fa fa-brands fa fa-linkedin" style="color: #0A66C2;"></i></a>
-                    <a class="socials-button" href="https://twitter.com/"><i class="fa fa-brands fa fa-twitter" style="color: #00ACEE;"></i></a>
-                    <a class="socials-button" href="https://www.youtube.com/"><i class="fa fa-brands fa fa-youtube" style="color: #FF0000;"></i></a>
-                </div>
-                <p>Made With &#x1FA75; By Team 36</p>
+  <div class="footer">
+                            <div class="footer-text">
+                                <p>Follow Us!</p>
+                                <div class="socials">
+                                    <a class="socials-button" href="https://www.linkedin.com/"><i class="fa fa-brands fa fa-linkedin" style="color: #fcd12a;"></i></a>
+                                    <a class="socials-button" href="https://twitter.com/"><i class="fa fa-brands fa fa-twitter" style="color: #fcd12a;"></i></a>
+                                    <a class="socials-button" href="https://www.youtube.com/"><i class="fa fa-brands fa fa-youtube" style="color: #fcd12a;"></i></a>
+                                </div>
+                                <p>Made With &#128155; By Team 36</p>
+                            </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
