@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "New Balance",
+        "name": "New Balance 550",
         "price": 105,
         "image": "pics/download (2).jpeg"
     },
@@ -19,9 +19,9 @@
     },
     {
         "id": 4,
-        "name": "New Balance",
+        "name": "Nike SB Force 58 Skate ",
         "price": 80,
-        "image": "pics/download (4).jpeg"
+        "image": "pics/Nike SB Force 58 Skate Shoe (Black).jpeg"
     },
     {
         "id": 5,
