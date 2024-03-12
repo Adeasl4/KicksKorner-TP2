@@ -1,0 +1,296 @@
+.body {
+    background-color: #e3e7e8;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    padding-left: 16px;
+}
+
+.topnav a {
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.topnav a:hover {
+
+    color: pink;
+}
+
+.topnav>div {
+    float: right;
+}
+
+.bf {
+    width: 16px;
+    padding-top: 17px;
+    float: left;
+}
+
+
+
+.navigate {
+    background-color: #f7bd03;
+    color: #0b0b0b;
+    padding: 0.25px;
+    text-align: center;
+}
+
+
+
+
+
+
+.container {
+
+    max-width: auto;
+    margin: auto;
+    padding-top: 10px;
+    max-width: 90vw;
+    text-align: center;
+    transition: transform .5s;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: 1fr 50px;
+
+}
+
+header h1 {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+header .icon-cart {
+    position: relative;
+
+}
+
+header .icon-cart img {
+    width: 22px;
+    cursor: pointer;
+
+}
+
+header .icon-cart span {
+    background-color: #a6a29d;
+    border-radius: 30px;
+    display: flex;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: #1f2626;
+    position: absolute;
+    top: 40%;
+    right: -10px;
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.listProduct .item img {
+    width: 267px;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: auto;
+}
+
+.listProduct .item {
+    background-color: rgb(250, 250, 250);
+
+
+}
+
+.listProduct .item h2 {
+    text-align: left;
+    font-weight: 500px;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 12px;
+    color: #3a3a3a;
+}
+
+.listProduct .item .price {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    padding-left: 12px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.listProduct .item button {
+    background-color: black;
+    color: #ccc;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.listProduct .item button:active {
+    background-color: #9b9a9a;
+    color: #0b0b0b;
+    box-shadow: 0 3px #b4b3b3;
+    transform: translateY(4px);
+}
+
+.cartTab {
+    width: 350px;
+    background-color: #eeeded;
+    color: #0b0b0b;
+    position: fixed;
+    inset: 0 -350px 0 auto;
+    display: grid;
+    grid-template-rows: 60px 1fr 42px;
+    transition: .5s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+
+}
+
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+
+body.showCart .container {
+    transform: translateX(-250px)
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.cartTab .btn button {
+    background-color: #f7bd03;
+    border: none;
+
+}
+
+.cartTab .btn .close {
+    background-color: #0b0b0b;
+    color: #ccc;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 60px 60px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    background-color: #0b0b0b;
+    color: #e3e7e8;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.listCart .quantity span:nth-child(2) {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    color: #0b0b0b;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #b4b3b3;
+
+}
+
+.listCart {
+    overflow: auto;
+}
+
+
+
+.footer {
+    background-color: #0b0b0b;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+ul {
+
+    list-style-type: none;
+    color: rgb(227, 227, 227);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+    padding-right: 17px;
+    list-style-type: none;
+}
+
+.f1 li {
+    padding-top: 10px;
+}
+
+.f1 li:hover {
+    color: #3a3a3a;
+}
+
+.f2 li {
+    padding-top: 10px;
+}
+
+.f2 li:hover {
+    color: #3a3a3a;
+}
+
+.f3 img {
+    padding-top: 10px;
+    width: 20px;
+    display: inline-block;
+}
