@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,6 +59,8 @@ Route::put('/inventory-management/update', [InventoryController::class, 'update'
 Route::delete('/inventory-management/delete', [InventoryController::class, 'delete'])->name('inventory.delete'); //Delete data
 Route::get('/inventory-management/search', [InventoryController::class, 'search'])->name('inventory.search'); //Search
 
+route::get('/contact' , [ContactController::class , 'show'])->name('contact.show');
+route::post('/contact' , [ContactController::class , 'send'])->name('contact.send');
 
 
 
