@@ -108,13 +108,9 @@
 
 <div class="container px-5 py-24 mx-auto">
 @if (session()->has('success'))
-    <div class="relative bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-3 flex items-center">
-        <div class="text-lg font-semibold mr-3">&#x2713;</div> <!-- Checkmark icon -->
-        <div class="text-sm flex-grow">{{ session('success') }}</div> <!-- Success message -->
-        <button class="px-4 py-3 focus:outline-none" onclick="this.parentElement.style.display='none'">
-            <span class="text-green-500 hover:text-green-800">✕</span> <!-- Close icon -->
-        </button>
-    </div>
+    <script>
+        alert("{{ session('success') }}");
+    </script>
 @endif
 
 
@@ -126,7 +122,7 @@
                             <a href="#" id="hide" class="hide">X</a>
                         </div>
                         <h2>Join Us Today!</h2>
-                        <form action="{{route('contact.send')}}" method="POST">
+                        <form action="{{route('contact.send')}}" method="POST" onsubmit="return validateForm()">
                         @csrf
  <div class="lg:w-1/2 md:w-2/3 mx-auto">
       <div class="flex flex-wrap -m-2">
@@ -142,7 +138,7 @@
         <div class="p-2 w-1/2">
           <div class="relative">
             
-            <input type="email" id="email" name="email" placeholder="Email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
           </div>
           @error('email')
               <span class="text-red-500">{{$message}}</span>
@@ -163,6 +159,21 @@
      
     </div>
  </form>
+
+ <script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        if (name === '' || email === '' || message === '') {
+            alert("Please check the form and ensure all fields are properly filled in!");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+
                     </div>
                 </div>
             </div>

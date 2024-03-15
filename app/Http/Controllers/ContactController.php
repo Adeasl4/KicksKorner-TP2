@@ -23,6 +23,6 @@ class ContactController extends Controller
         Mail::to('kickskornerbusiness@gmail.com')->send(new ContactUs($data));
 
         //dd('sent');
-        return redirect()->back()->with('success', 'Message sent successfully');
+        return redirect()->back()->with('success', 'Your message has been successfully delivered!');
     }
 }
