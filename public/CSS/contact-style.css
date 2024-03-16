@@ -203,11 +203,7 @@ p{
   height: auto;
 }
 
-@keyframes dropdown-animation {
-  0%{transform: translateY(-75%); opacity: 0;}
-  50%{transform: translateY(-37.5%); opacity: 0;}
-  100%{transform: translateY(0%); opacity: 1;}
-}
+
 
 .content{
     display: flex;
@@ -454,7 +450,13 @@ textarea{
     margin: 0 5px;
 }
 
-/*Key frames for animations: */
+/* Keyframes for animations: */
+@keyframes dropdown-animation {
+  0%{transform: translateY(-75%); opacity: 0;}
+  50%{transform: translateY(-37.5%); opacity: 0;}
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
@@ -465,7 +467,8 @@ textarea{
     to {transform: scale(1)}
 }
 
-/*Media queries for responsiveness: */
+/*Media queries for responsiveness : */
+
 @media screen and (max-width: 1366px){
     input[type=text], input[type=email], textarea {
         padding: 10px 20px;
