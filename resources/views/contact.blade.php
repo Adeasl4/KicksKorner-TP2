@@ -87,7 +87,7 @@
                 <div class="card">
                     <h1>PHONE</h1>
                     <p>Need to speak with us directly? Here are our contact numbers:</p>
-                    <ul>
+                    <ul class="align">
                         <li>24/7 Customer Support</li>
                         <li>Local no. - <i class="fa fa-solid fa fa-phone" style="color: #000000;"></i> +44 7543678976</li>
                         <li>International no. - <i class="fa fa-solid fa fa-globe" style="color: #000000;"></i> 0121 211 8279</li>
@@ -106,12 +106,12 @@
 
   
 
-<div class="container px-5 py-24 mx-auto">
-@if (session()->has('success'))
+            @if (session()->has('success'))
     <script>
         alert("{{ session('success') }}");
     </script>
 @endif
+
 
 
 
@@ -173,7 +173,7 @@
         return true; // Allow form submission
     }
 </script>
-
+ 
                     </div>
                 </div>
             </div>
