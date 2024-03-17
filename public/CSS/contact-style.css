@@ -83,127 +83,127 @@ p{
 }
 
 .nav {
-    /*background-image: linear-gradient(to top, #000, #1b1b1b);*/
-    background-color: #000;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    transition: height 0.25s ease-in-out;
-    pointer-events: none;
-    overflow: hidden;
+  /*background-image: linear-gradient(to top, #000, #1b1b1b);*/
+  background-color: #000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: height 0.25s ease-in-out;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0;
+list-style-type: none; 
+display: flex; 
+justify-content: space-between; 
+align-items: flex-start;
+padding: 0;
 }
 
 .nav > ul{
-    margin: 0 40px 0 40px;
-  }
+margin: 0 40px 0 40px;
+}
 
 .nav-img{
-    height: 80px;
+  height: 80px;
 }
 
 .nav li{
-    list-style-type: none;
-    top: 50%;
+  list-style-type: none;
+  top: 50%;
 }
 
 .nav li a{
-    display: inline-block;
-    position: relative;
-    color: #f2f2f2;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 300;
+  display: inline-block;
+  position: relative;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .nav li a:hover{
-    color: #BDBDBD;
+  color: #BDBDBD;
 }
 
 .underline{
-  position: relative;
-  display: inline-block;
-  pointer-events: auto;
+position: relative;
+display: inline-block;
+pointer-events: auto;
 }
 
 .underline a::after{
-  content: '';
-  position: absolute;
-  width: 60%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 20%;
-  /* background-color: rgba(29, 144, 189, 1); */
-  background-color: rgba(255, 255, 255, 1);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out, width 0.25s ease-out;;
+content: '';
+position: absolute;
+width: 60%;
+transform: scaleX(0);
+height: 2px;
+bottom: 0;
+left: 20%;
+/* background-color: rgba(29, 144, 189, 1); */
+background-color: rgba(255, 255, 255, 1);
+transform-origin: bottom right;
+transition: transform 0.25s ease-out, width 0.25s ease-out;;
 }
 
 .underline a:hover::after{
-  transform: scaleX(1);
-  transform-origin: bottom left;
+transform: scaleX(1);
+transform-origin: bottom left;
 }
 
 .dropdown{
-  font-size: 13px !important;
-  text-decoration: none;
-  color: #fff;
+font-size: 13px !important;
+text-decoration: none;
+color: #fff;
 }
 
 .dropdown::after{
-  height: 0px !important;
+height: 0px !important;
 }
 
 .dropdown:hover{
-  color: rgba(29, 144, 189, 1) !important;
+color: rgba(29, 144, 189, 1) !important;
 }
 
 .drop-col{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+display: grid;
+grid-template-columns: 1fr 1fr;
 
 }
 
 .underline:hover .dropdown-container{
-  display: inherit;
+display: inherit;
 }
 
 .dropdown-container-men, .dropdown-container-women, .dropdown-container-kids{
-  display: none;
-  background-color: #000;
-  z-index: 1;
-  overflow: hidden;
-  height: 0;
+background-color: #000;
+z-index: 1;
+overflow: hidden;
+height: 0;
+}
+
+.categories{
+text-align: center;
 }
 
 #men:hover .dropdown-container-men{
-  display: inherit;
-  animation: dropdown-animation 0.25s linear;
-  height: auto;
+animation: dropdown-animation 0.25s linear;
+height: auto;
 }
+
 #women:hover .dropdown-container-women{
-  display: inherit;
-  animation: dropdown-animation 0.25s linear;
-  height: auto;
+animation: dropdown-animation 0.25s linear;
+height: auto;
 }
+
 #kids:hover .dropdown-container-kids{
-  display: inherit;
-  animation: dropdown-animation 0.25s linear;
-  height: auto;
+animation: dropdown-animation 0.25s linear;
+height: auto;
 }
-
-
 
 .content{
     display: flex;
@@ -228,10 +228,10 @@ p{
     margin: 10vh 0 20vh 0;
     
 }
+
 .align{
     padding: 10%;
 }
-
 
 .card{
     /* background-color: rgba(166, 166, 166,0.1); */
@@ -250,6 +250,7 @@ p{
     border: 0.30vw solid #000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 .card p{
     color: #1f1f1f;
 }
@@ -279,15 +280,13 @@ button{
 button:hover{
     background-color: #000;
     color: #fcd12a;
+    cursor: pointer;
 }
-
 
 .animate {
     -webkit-animation: animatezoom 0.25s;
     animation: animatezoom 0.25s
 }
-
-
 
 .registration {
     height: 120vh;
@@ -314,6 +313,7 @@ button:hover{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 .registration-form{
     display: flex;
     flex-wrap: wrap;
@@ -389,7 +389,6 @@ textarea{
 .registration-form > div:hover{
     opacity: 0.7;
 }
-
 
 .footer {
     overflow: auto;
