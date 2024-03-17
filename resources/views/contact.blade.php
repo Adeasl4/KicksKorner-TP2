@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="Images/logo-png.png" type="image/x-icon">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/logo-png.png" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="CSS/contact-style.css">
         <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
         <script src="JS/contactus-script.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <title>KicksKorner - Kicks for every corner!</title>
+        
+        <title>Contact Us</title>
     </head>
-    <body>
-        <div class="wrapper">
+<body>
+
+<div class="wrapper">
             <div class="nav">
                 <ul>
                     <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
@@ -68,23 +70,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="registration" id="reg">
-                <div class="registration-box">
-                    <div class="registration-form animate">
-                        <div>
-                            <a href="#" id="hide" class="hide">X</a>
-                        </div>
-                        <h2>Join Us Today!</h2>
-                        <form action="PHP/register.php" method="post">
-                            <input type="text" id="name" placeholder=" Your Name" required>
-                            <input type="email" id="email" placeholder=" Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                            <textarea id="message" placeholder="Message" required></textarea>
-                            <input type="submit" id="register" value="Send">
-                        </form>
-                    </div>
-                </div>
-            </div>
-
             <div class="content">
                 <div class="text">
                     <div class="titles">
@@ -102,7 +87,7 @@
                 <div class="card">
                     <h1>PHONE</h1>
                     <p>Need to speak with us directly? Here are our contact numbers:</p>
-                    <ul>
+                    <ul class="align">
                         <li>24/7 Customer Support</li>
                         <li>Local no. - <i class="fa fa-solid fa fa-phone" style="color: #000000;"></i> +44 7543678976</li>
                         <li>International no. - <i class="fa fa-solid fa fa-globe" style="color: #000000;"></i> 0121 211 8279</li>
@@ -112,10 +97,89 @@
                     <h1>EMAIL</h1>
                     <p>Get in contact! Fill out the form below to reach us, and we'll reply as soon as possible.</p>
                     <button class="buttons" type="button" id="popup">Email Us!</button>
-                    <p>Alternatively, email us at - KicksKorner@gmail.com</p>
+                    <p>Alternatively, email us at - kickskornerbusiness@gmail.com</p>
                 </div>
             </div>
-           <div class="footer">
+
+
+            
+
+  
+
+            @if (session()->has('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
+@endif
+
+
+
+
+<div class="registration" id="reg">
+                <div class="registration-box">
+                    <div class="registration-form animate">
+                        <div>
+                            <a href="#" id="hide" class="hide">X</a>
+                        </div>
+                        <h2>Join Us Today!</h2>
+                        <form action="{{route('contact.send')}}" method="POST" onsubmit="return validateForm()">
+                        @csrf
+ <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <div class="flex flex-wrap -m-2">
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            
+            <input type="text" id="name" name="name" placeholder="Name"  class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          @error('name')
+              <span class="text-red-500">{{$message}}</span>
+          @enderror
+        </div>
+        <div class="p-2 w-1/2">
+          <div class="relative">
+            
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          @error('email')
+              <span class="text-red-500">{{$message}}</span>
+          @enderror
+        </div>
+        <div class="p-2 w-full">
+          <div class="relative">
+            
+            <textarea id="message" name="message"  placeholder="Your message" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          @error('message')
+              <span class="text-red-500">{{$message}}</span>
+          @enderror
+        </div>
+        <div class="p-2 w-full">
+          <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+        </div>
+     
+    </div>
+ </form>
+
+ <script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        if (name === '' || email === '' || message === '') {
+            alert("Please check the form and ensure all fields are properly filled in!");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+ 
+                    </div>
+                </div>
+            </div>
+  </div>
+</section>
+<div class="footer">
                                        <a class="admin-button" href="http://127.0.0.1:8000/">Home</a>
                                        <div class="footer-text">
                                            <p>Follow Us!</p>
@@ -129,6 +193,5 @@
                                        </div>
                                        <a class="admin-button" href="">Admin Login</a>
                                    </div>
-        </div>
-    </body>
+</body>
 </html>

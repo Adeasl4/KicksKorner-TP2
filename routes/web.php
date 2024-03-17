@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,6 +61,8 @@ Route::get('/inventory-management/search', [InventoryController::class, 'search'
 Route::get('/inventory-management/generate-report', [InventoryController::class, 'generateReport'])->name('inventory.generate_report');
 
 
+route::get('/contact' , [ContactController::class , 'show'])->name('contact.show');
+route::post('/contact' , [ContactController::class , 'send'])->name('contact.send');
 
 
 
