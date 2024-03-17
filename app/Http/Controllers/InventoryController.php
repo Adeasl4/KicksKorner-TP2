@@ -124,5 +124,11 @@ class InventoryController extends Controller
         return view('frontend.inventory', compact('products'));
     }
 
+    public function generateReport()
+    {
+        $products = Product::all();
+        return response()->json(['products' => $products]);
+    }
+
 
 }

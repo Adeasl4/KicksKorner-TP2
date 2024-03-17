@@ -57,6 +57,8 @@ Route::post('/inventory-management/store', [InventoryController::class, 'store']
 Route::put('/inventory-management/update', [InventoryController::class, 'update'])->name('inventory.update'); //Update data
 Route::delete('/inventory-management/delete', [InventoryController::class, 'delete'])->name('inventory.delete'); //Delete data
 Route::get('/inventory-management/search', [InventoryController::class, 'search'])->name('inventory.search'); //Search
+Route::get('/inventory-management/generate-report', [InventoryController::class, 'generateReport'])->name('inventory.generate_report');
+
 
 
 

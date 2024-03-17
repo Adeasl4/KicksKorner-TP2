@@ -102,7 +102,7 @@
         <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addProductModal">
             Add Product
         </button>
-        <br><br><button type="button" class="update-btn">
+        <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#stockReportModal">
             Generate Report
         </button>
     </div>
@@ -194,6 +194,28 @@
     @endforeach
 
 
+    <div class="modal fade" id="stockReportModal" tabindex="-1" role="dialog" aria-labelledby="stockReportModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="stockReportModalLabel">Stock Report</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="stockChart"></canvas>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="footer">
                             <div class="footer-text">
                                 <p>Follow Us!</p>
@@ -208,5 +230,55 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+        // Function to generate the stock report chart
+        function generateStockReportChart(products) {
+            var labels = [];
+            var data = [];
+
+            // Extract labels (product names) and data (stock levels) from products
+            products.forEach(function(product) {
+                labels.push(product.name);
+                data.push(product.units_in_stock);
+            });
+
+            // Create a bar chart
+            var ctx = document.getElementById('stockChart').getContext('2d');
+            var stockChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Stock Level',
+                        data: data,
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Function to fetch products data and generate the chart
+        $('#stockReportModal').on('show.bs.modal', function() {
+            $.ajax({
+                url: '{{ route("inventory.generate_report") }}',
+                type: 'GET',
+                success: function(data) {
+                    generateStockReportChart(data.products);
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
