@@ -7,15 +7,15 @@
     },
     {
         "id": 2,
-        "name": "Adidas",
+        "name": "Nike Dunks Low",
         "price": 80,
-        "image": "pics/download (3).jpeg"
+        "image": "pics/Nike Dunk Low University Red.jpeg"
     },
     {
         "id": 3,
-        "name": "Nike Dunk Low",
+        "name": "Adidas Forum 84 Low",
         "price": 150,
-        "image": "pics/Nike Dunk Low University Red.jpeg"
+        "image": "pics/download (3).jpeg"
     },
     {
         "id": 4,
@@ -25,27 +25,27 @@
     },
     {
         "id": 5,
-        "name": "New Balance",
-        "price": 80,
-        "image": "pics/download (2).jpeg"
+        "name": "Vans Old Skool",
+        "price": 90,
+        "image": "pics/vans reg.jpeg"
     },
     {
         "id": 6,
-        "name": "Adidas",
+        "name": "Adidas  OG Samba",
         "price": 80,
-        "image": "pics/download (3).jpeg"
+        "image": "pics/adidas Samba.jpeg"
     },
     {
         "id": 7,
-        "name": "New Balance",
+        "name": "New Balance 550",
         "price": 80,
         "image": "pics/download (4).jpeg"
     },
     {
         "id": 8,
-        "name": "Nike Dunk Low",
+        "name": "New Balance Unisex",
         "price": 140,
-        "image": "pics/Nike Dunk Low University Red.jpeg"
+        "image": "pics/New Balance Unisex 1906D.jpeg"
     },
     {
         "id": 9,
@@ -55,20 +55,44 @@
     },
     {
         "id": 10,
-        "name": "New Balance",
+        "name": "Nike BLAZER MID 77 PRO CLUB",
         "price": 95,
-        "image": "pics/download (2).jpeg"
+        "image": "pics/Nike Sportswear BLAZER MID 77 PRO CLUB - Sneakers alte.jpeg"
     },
     {
         "id": 11,
-        "name": "New Balance",
-        "price": 80,
-        "image": "pics/download (2).jpeg"
+        "name": "Salehe Bembury x The Pollex Clogs",
+        "price": 65,
+        "image": "pics/Salehe Bembury x The Pollex Clogs in Niagara - 9.jpeg"
     },
     {
         "id": 12,
-        "name": "New Balance",
+        "name": "Adidas Gazelle Unisex Shoes ",
         "price": 75,
-        "image": "pics/download (4).jpeg"
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 13,
+        "name": "Adidas Gazelle Unisex Shoes ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 14,
+        "name": "Adidas Gazelle Unisex Shoes ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 15,
+        "name": "Adidas Gazelle Unisex Shoes ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 16,
+        "name": "Adidas Gazelle Unisex Shoes ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
     }
 ]

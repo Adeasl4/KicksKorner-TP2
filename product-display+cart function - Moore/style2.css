@@ -116,13 +116,14 @@ header .icon-cart span {
     display: block;
 
 
+
 }
 
 .filter p {
-    color: rgb(130, 43, 43);
-    font-size: 13px;
-    padding: 7px;
-
+    color: rgb(49, 49, 49);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11.5px;
+    padding: 8px;
 }
 
 .filter .section {
@@ -131,28 +132,31 @@ header .icon-cart span {
 
 }
 
-.filter p:hover {
-    color: teal;
-}
+
 
 .dropdown {
     border-style: none;
 }
 
+.dropdown-content:hover {
+    color: #9b9a9a;
+}
+
 .dropdown-content {
     background-color: white;
-    color: black;
+    color: rgb(49, 49, 49);
     padding: 20px 18px;
-    font-size: 11px;
+    font-size: 11.5px;
     border-style: none;
+    border-left-style: solid;
+    border-color: #ccc;
     cursor: pointer;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 
 
 }
 
-.dropdown-content:hover {
-    color: teal;
-}
 
 
 
@@ -170,43 +174,14 @@ header .icon-cart span {
     padding-top: 60px;
 }
 
-/*.sidebar a {
 
-    padding: 12px;
-    text-decoration: none;
-    font-size: 17px;
-    color: #2e2e2e;
+#brands {
+
+    color: #f7bd03;
     display: block;
-    transition: 0.3s;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-.sidebar a:hover {
-    color: #969696;
-}
-}*/
-
-.size {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
+    position: relative;
 }
 
-.size h4 {
-    text-align: left;
-    padding-left: 14px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 15px;
-
-
-}
-
-.s1 {
-
-    border-style: solid;
-    border-width: thin;
-    border-color: #9b9a9a;
-    padding: 12px;
-
-}
 
 
 
@@ -216,20 +191,24 @@ header .icon-cart span {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    color: #0b0b0b;
+    text-decoration: none;
+
 }
 
 .openbtn {
     cursor: pointer;
-    color: rgb(57, 57, 57);
+    color: rgb(49, 49, 49);
     text-align: center;
     text-decoration: none;
-    padding: 16px 25px;
+    padding: 16px 18px;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11.5px;
+    font-family: Arial, Helvetica, sans-serif;
     border-style: none;
     border-right-style: solid;
     border-width: thin;
-    border-color: #9b9a9a;
+    border-color: #ccc;
     display: inline-block;
     background-color: white;
 }
