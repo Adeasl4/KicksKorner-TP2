@@ -1,74 +1,74 @@
 [
     {
         "id": 1,
-        "name": "New Balance",
+        "name": "Nike Donne Air Max",
         "price": 105,
-        "image": "pics/download (2).jpeg"
+        "image": "pics/Nike SB Zoom Pogo Plus Premium Skate Shoes (Summit White).jpeg"
     },
     {
         "id": 2,
-        "name": "Adidas",
-        "price": 80,
-        "image": "pics/download (3).jpeg"
+        "name": "Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg"
     },
     {
         "id": 3,
-        "name": "New Balance",
+        "name": "New Balance 550",
         "price": 150,
         "image": "pics/download (4).jpeg"
     },
     {
         "id": 4,
-        "name": "Nike Dunk Low",
+        "name": "Birkenstocks Boston Clogs",
         "price": 80,
-        "image": "pics/Nike Dunk Low University Red.jpeg"
+        "image": "pics/Birkenstock Boston Suede Soft Footbed Clogs.jpeg"
     },
     {
         "id": 5,
-        "name": "Nike Hera",
-        "price": 80,
-        "image": "pics/Nike Tech Hera Women's Shoes (Oil Green).jpeg"
+        "name": "New Balance 1906D Unisex",
+        "price": 140,
+        "image": "pics/New Balance Unisex 1906D.jpeg"
     },
     {
         "id": 6,
-        "name": "New Balance",
+        "name": "Vans Skate Slip-On",
         "price": 80,
-        "image": "pics/Nike Air VaporMax Plus Women's Shoes.jpeg "
+        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg "
     },
     {
         "id": 7,
-        "name": "Adidas",
-        "price": 80,
-        "image": "pics/download (3).jpeg"
+        "name": "Converse Lows",
+        "price": 72,
+        "image": "pics/low converse brown.jpeg"
     },
     {
         "id": 8,
-        "name": "New Balance",
+        "name": "Nike Mid Blazer 77",
         "price": 140,
-        "image": "pics/download (2).jpeg"
+        "image": "pics/Pumpkin Spice nike high.jpeg"
     },
     {
         "id": 9,
-        "name": "Converse Chuck",
-        "price": 82,
-        "image": "pics/Play Red Heart Converse Chuck All Star '70 High.jpeg"
+        "name": "Adidas Gazelle Unisex",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
     },
     {
         "id": 10,
-        "name": "New Balance",
+        "name": "Reebok Club C Revenge",
         "price": 95,
-        "image": "pics/download (2).jpeg"
+        "image": "pics/Club C Revenge Vintage Sneaker red.jpeg"
     },
     {
         "id": 11,
-        "name": "Converse Chuck",
+        "name": "Converse Comme De Garcons",
         "price": 80,
         "image": "pics/Play Red Heart Converse Chuck All Star '70 High.jpeg"
     },
     {
         "id": 12,
-        "name": "New Balance",
-        "price": 75,
-        "image": "pics/download (4).jpeg"
+        "name": "Adidas OG Sambas",
+        "price": 150,
+        "image": "pics/adidas Samba.jpeg"
     }
 ]
