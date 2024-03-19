@@ -166,5 +166,10 @@ const initApp = () => {
                 addCartToHtml();
             }
         })
+
+
+
 }
 initApp();
+
+
