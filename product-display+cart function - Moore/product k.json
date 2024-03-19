@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "New Balance 550 ",
+        "price": 105,
+        "image": "pics/New Balance 550 _White_Black_ Men's Shoe - Hibbett _ City Gear.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Nike Dunks Low Retro",
+        "price": 85,
+        "image": "pics/Men's Dunk Low Retro Premium Split - Deep Jungle White Silver _ 9_5.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Adidas  OG Samba",
+        "price": 150,
+        "image": "pics/adidas Samba.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Vans Checkered Slip-Ons",
+        "price": 80,
+        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Reebook Club C",
+        "price": 75,
+        "image": "pics/Club C Revenge Vintage.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "Converse AS-1 Pro Ox Shoes",
+        "price": 87,
+        "image": "pics/Converse AS-1 Pro Ox Shoes - Black _ White _ Gum.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "New Balance 1906D Unisex",
+        "price": 140,
+        "image": "pics/New Balance Unisex 1906D.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Birkenstock Lutry Clog",
+        "price": 82,
+        "image": "pics/Birkenstock Lutry Clog in Black, Men's at Urban Outfitters.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "Converse Chuck Taylor",
+        "price": 95,
+        "image": "pics/Brown converse.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Nike Dunk Low PRM",
+        "price": 65,
+        "image": "pics/Dunk Low PRM Burgundy Crush Mens .jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Adidas Gazelle Unisex ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    }
+]
