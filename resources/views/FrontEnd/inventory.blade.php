@@ -27,7 +27,7 @@
                             <a href="{{ route('inventory.management') }}">Inventory Management</a>
                         </li>
                         <li class="underline">
-                            <a href="{{ route('process.orders') }}">Process Orders</a>
+                            <a href="{{ route('process.index') }}">Process Orders</a>
                         </li>
                     </ul>
                 </li>
@@ -81,7 +81,7 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>
-                        <td>{{ $product->units_in_stock }}</td>
+                        <td>{{ $product->stock_lvl }}</td>
                         <td>
                             <a class="update-btn" 
                             data-toggle="modal" 
@@ -134,8 +134,8 @@
             <label for="price">Price:</label>
             <input type="number" min="1" step="0.01" name="price" id="price" required><br><br>
 
-            <label for="units_in_stock">Stock:</label>
-            <input type="number" name="units_in_stock" id="units_in_stock" required><br><br>
+            <label for="stock_lvl">Stock:</label>
+            <input type="number" name="stock_lvl" id="stock_lvl" required><br><br>
 
             <label for="image_url">Image URL:</label>
             <input type="text" name="image_url" id="image_ul" required><br><br>
@@ -178,8 +178,8 @@
                         <label for="update_price">Price:</label>
                         <input type="number" min="1" step="0.01" name="price" id="update_price{{ $product->id }}" value="{{ $product->price }}" required><br><br>
 
-                        <label for="update_units_in_stock">Stock:</label>
-                        <input type="number" min="1" step="1" name="units_in_stock" id="update_units_in_stock{{ $product->id }}" value="{{ $product->units_in_stock }}" required><br><br>
+                        <label for="update_stock_lvl">Stock:</label>
+                        <input type="number" min="1" step="1" name="stock_lvl" id="update_stock_lvl{{ $product->id }}" value="{{ $product->stock_lvl }}" required><br><br>
 
                         <label for="update_image_url">Image URL:</label>
                         <input type="text" name="image_url" id="update_image_url{{ $product->id }}" value="{{ $product->image_url }}" required><br><br>
@@ -241,7 +241,7 @@
             // Extract labels (product names) and data (stock levels) from products
             products.forEach(function(product) {
                 labels.push(product.name);
-                data.push(product.units_in_stock);
+                data.push(product.stock_lvl);
             });
 
             // Create a bar chart

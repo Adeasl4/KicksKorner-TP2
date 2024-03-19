@@ -51,7 +51,9 @@ Route::post('/admin/store', [UserController::class, 'store'])->name('users.store
 Route::delete('/admin/deleteSelected', [UserController::class, 'deleteSelected'])->name('users.deleteSelected'); //Delete data
 Route::put('/admin/update', [UserController::class, 'update'])->name('users.update'); //Update data
 
-Route::get('/process-orders', [ProcessController::class, 'index'])->name('process.orders');
+Route::get('/process', [ProcessController::class, 'index'])->name('process.index');//Show process orders page
+Route::post('/process-orders', [ProcessController::class, 'processOrders'])->name('process.orders');
+
 
 Route::get('/inventory-management', [InventoryController::class, 'index'])->name('inventory.management');
 Route::post('/inventory-management/store', [InventoryController::class, 'store'])->name('inventory.store'); //Store data

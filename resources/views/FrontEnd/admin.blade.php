@@ -27,7 +27,7 @@
                                 <a href="{{ route('inventory.management') }}">Inventory Management</a>
                             </li>
                             <li class="underline">
-                                <a href="{{ route('process.orders') }}">Process Orders</a>
+                                <a href="{{ route('process.index') }}">Process Orders</a>
                             </li>
                         </ul>
                     </li>
@@ -47,6 +47,7 @@
             <th>Name</th>
             <th>Password</th>
             <th>Email</th>
+            <th>Update?</th>
             <th>Delete?</th>
           </tr>
           @foreach($users as $user)
@@ -55,22 +56,26 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->password }}</td>
             <td>{{ $user->email }}</td>
+            <td>
+                            <a class="update-btn" 
+                            data-toggle="modal" 
+                            data-target="#updateCustomerModal{{ $user->id }}">
+                            Update
+                            </a>
+            </td>
             <!--<td><input type="checkbox" name="selectedUsers[]" value="{{ $user->id }}"></td>-->
             <!-- delete button for row-->
             <td><button type="submit" class="delete-btn" name="selectedUsers[]" value="{{ $user->id }}">Delete</button></td>
-    </form>
         </tr>
         @endforeach
     </table>
+    </form>
   </div>
 
     <!-- Add, edit, processing orders, and inventory managament buttons-->
   <div class="btn-container">
     <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addCustomerModal">
       Add Customer
-    </button>
-    <br><br><button type="button" class="update-btn" data-toggle="modal" data-target="#updateCustomerModal">
-      Update Customer
     </button>
   </div>
 
@@ -108,41 +113,44 @@
   </div>
 </div>
 
-<div class="modal fade" id="updateCustomerModal" tabindex="-1" role="dialog" aria-labelledby="updateCustomerModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- Modal header -->
-      <div class="modal-header">
-        <h5 class="modal-title" id="updateCustomerModalLabel">Update Customer Information</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <!-- Modal body -->
-      <div class="modal-body">
-        <!-- The form -->
-        <form action="{{ route('users.update') }}" method="POST" class="styled-form">
-          @csrf
-          @method('PUT')
+    <!-- Modal for updating customer data -->
+    @foreach ($users as $user)
+    <div class="modal fade" id="updateCustomerModal{{ $user->id }}" tabindex="-1" role="dialog" aria-labelledby="updateCustomerModalLabel{{ $user->id }}" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateCustomerModalLabel{{ $user->id }}">Update Customer Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <!-- The form -->
+                    <form action="{{ route('users.update') }}" method="POST" class="styled-form">
+                        @csrf
+                        @method('PUT')
 
-          <label for="user_id">User ID:</label>
-          <input type="text" name="user_id" required><br><br>
+                        <input type="hidden" min="1" name="user_id" value="{{ $user->id }}" required>
 
-          <label for="name">Name:</label>
-          <input type="text" name="name" required><br><br>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name{{ $user->id }}" value="{{ $user->name }}" required><br><br>
 
-          <label for="password">Password:</label>
-          <input type="password" name="password" required><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password{{ $user->id }}" value="{{ $user->password }}" required><br><br>
 
-          <label for="email">Email:</label>
-          <input type="email" name="email" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email{{ $user->id }}" value="{{ $user->email }}" required><br><br>
 
-          <button type="submit" class="update-btn">Update Information</button>
-        </form>
-      </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="update-btn">Update Information</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    @endforeach
 
   <div class="footer">
                             <div class="footer-text">
