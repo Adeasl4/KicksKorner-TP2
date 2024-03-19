@@ -1,3 +1,18 @@
+//sidebar
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "0px";
+}
+
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+
+
+
+
 
 
 let iconCart = document.querySelector('.icon-cart');
@@ -27,7 +42,7 @@ const addDataToHTML = () => {
             newProduct.classList.add('item');
             newProduct.dataset.id = product.id;
             newProduct.innerHTML = `
-            <img src="${product.image}" alt="nikevapour">
+            <img src="${product.image}" alt="">
             <h2>${product.name}</h2>
             <div class="price">£${product.price}</div>
             <button class="addCart">Add to Cart</button>
