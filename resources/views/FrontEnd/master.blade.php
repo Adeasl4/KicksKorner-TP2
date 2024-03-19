@@ -125,11 +125,9 @@
             <div class="about">
                 <div class="text">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<br>
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip<br>
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu<br>
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt<br>
-                        mollit anim id est laborum.
+                    Our Goal:<br> 
+                        The main goal for Kickskorner is to provide a wide range of footwear for individuals of all ages.<br>
+                        Its secondary goal is to redefine the online shoe-shopping experience.<br>
                     </p>
                     <div class="about-buttons">
                         <a href="http://127.0.0.1:8000/about" class="buttons">About Us</a>
@@ -139,29 +137,29 @@
                 <img src="Images/logo-new-bg.png" alt="" class="about-img">
             </div>
             <div class="titles">
-                <h1>Our Selection</h1>
+                <h1>Shoe Selection</h1>
             </div>
             <div class="product-previews">
                 <div class="cards">
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Lorem Ipsum</p>
+                        <p>Trainers</p>
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Lorem Ipsum</p>
+                        <p>Boots</p>
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Lorem Ipsum</p>
+                        <p>Sandels</p>
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Lorem Ipsum</p>
+                        <p>Formal Shoes</p>
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Lorem Ipsum</p>
+                        <p>Converse</p>
                     </div>
                 </div>
             </div>
