@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="Images/logo-png.png" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="CSS/master-style.css">
         <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
@@ -13,6 +13,25 @@
         <title>KicksKorner - Kicks for every corner!</title>
     </head>
     <body>
+
+    <div class="preloaderBg" id="preloader">
+            <div class="loader-wrap">
+                <div class="preloader"></div>
+                <div class="preloader2"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var preloadTime;
+
+            function preloader() {
+            preloadTime = setTimeout(showPage, 2000);
+            }
+
+            function showPage() {
+            document.getElementById("preloader").style.display = "none";
+            }
+            window.onload = preloader;
+        </script>
         <div class="wrapper">
             <div class="nav">
                 <ul>
@@ -151,7 +170,7 @@
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">
-                        <p>Sandels</p>
+                        <p>Sandals</p>
                     </div>
                     <div class="card" onclick="location.href='';">
                         <img src="Images/Shoe.png" alt="" class="card-img">

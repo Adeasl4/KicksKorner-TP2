@@ -104,7 +104,7 @@
                     </div>
                     <div class="card">
                         <h2>Bassit Irfan</h2>
-                        <p>Has been working on the front and back end of this website.</p>
+                        <p>Has been diligently working on both the front and back end of the website, particularly focusing on the contact us page while ensuring consistency across all pages.</p>
                     </div>
                     <div class="break"></div>
                     <div class="card">
