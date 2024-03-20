@@ -1,27 +1,27 @@
 [
     {
         "id": 1,
-        "name": "New Balance 550 ",
-        "price": 105,
-        "image": "pics/New Balance 550 _White_Black_ Men's Shoe - Hibbett _ City Gear.jpeg"
+        "name": "Vans Checkered Slip-Ons ",
+        "price": 80,
+        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg"
     },
     {
         "id": 2,
-        "name": "Nike Dunks Low Retro",
+        "name": "New Balance 550",
         "price": 85,
-        "image": "pics/Men's Dunk Low Retro Premium Split - Deep Jungle White Silver _ 9_5.jpeg"
+        "image": "pics/New Balance Unisex 550.jpeg"
     },
     {
         "id": 3,
-        "name": "Adidas  OG Samba",
-        "price": 150,
-        "image": "pics/adidas Samba.jpeg"
+        "name": "New Balance GW500",
+        "price": 90,
+        "image": "pics/New Balance GW500 - Sneakers laag - stone pink.jpeg"
     },
     {
         "id": 4,
-        "name": "Vans Checkered Slip-Ons",
-        "price": 80,
-        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg"
+        "name": "Reebok Classic Club",
+        "price": 90,
+        "image": "pics/Reebok Classic CLUB GROUNDS UNISEX - Trainers - chalk_core black_gum.jpeg"
     },
     {
         "id": 5,
@@ -31,9 +31,9 @@
     },
     {
         "id": 6,
-        "name": "Reebook Club C",
+        "name": "Converse Chuck Taylor",
         "price": 75,
-        "image": "pics/Club C Revenge Vintage.jpeg"
+        "image": "pics/WOMENS CONVERSE CHUCK TAYLOR ALL-STARS LIFT - Red _ 6.jpeg"
     },
     {
         "id": 7,
@@ -43,9 +43,9 @@
     },
     {
         "id": 8,
-        "name": "New Balance 1906D Unisex",
-        "price": 140,
-        "image": "pics/New Balance Unisex 1906D.jpeg"
+        "name": "Nike Dunk Lows",
+        "price": 100,
+        "image": "pics/nikes.jpeg"
     },
     {
         "id": 9,
@@ -55,15 +55,15 @@
     },
     {
         "id": 10,
-        "name": "Converse Chuck Taylor",
+        "name": "Crocs",
         "price": 95,
-        "image": "pics/Brown converse.jpeg"
+        "image": "pics/Crocs.jpeg"
     },
     {
         "id": 11,
-        "name": "Nike Dunk Low PRM",
-        "price": 65,
-        "image": "pics/Dunk Low PRM Burgundy Crush Mens .jpeg"
+        "name": "Converse Chuck Taylor",
+        "price": 95,
+        "image": "pics/Brown converse.jpeg"
     },
     {
         "id": 12,
