@@ -151,6 +151,8 @@
                     <div class="about-buttons">
                         <a href="http://127.0.0.1:8000/about" class="buttons">About Us</a>
                         <a href="http://127.0.0.1:8000/contact" class="buttons">Contact Us</a>
+                        <a href="http://127.0.0.1:8000/feedback/create" class="buttons">Review Us</a>
+
                     </div>
                 </div>
                 <img src="Images/logo-new-bg.png" alt="" class="about-img">
