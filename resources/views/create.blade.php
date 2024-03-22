@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Images/logo-png.png" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="public\CSS\feedback-style.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/feedback-style.css">
+
         <style>@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');</style>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
@@ -18,11 +19,11 @@
 <div class="wrapper">
             <div class="nav">
                 <ul>
-                    <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
+                <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
                     <li>
                         <ul>
                             <li class="underline" id="men">
-                                <a href="http://127.0.0.1:8000/mens">Men</a>
+                                <a href="#">Men</a>
                                 <div class="dropdown-container-men">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Men's Products 1</a>
@@ -35,7 +36,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="women">
-                                <a href="http://127.0.0.1:8000/womens">Women</a>
+                                <a href="#">Women</a>
                                 <div class="dropdown-container-women">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Women's Products 1</a>
@@ -48,7 +49,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="kids">
-                                <a href="http://127.0.0.1:8000/kids">Kids</a>
+                                <a href="#">Kids</a>
                                 <div class="dropdown-container-kids">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Kid's Products 1</a>
@@ -64,11 +65,15 @@
                     </li>
                     <li>
                         <ul class="functions underline">
-                            <li><a href="http://127.0.0.1:8000/login">Login</a></li>
-                            <li><a href="http://127.0.0.1:8000/register">Sign Up</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Sign Up</a></li>
                         </ul>
                     </li>
                 </ul>
+            </div>
+
+            <hr> 
+
 @if(session('success'))
     <div class="alert alert-success">
         {{ session('success') }}
@@ -77,7 +82,7 @@
 
 <form action="{{ route('feedback.store') }}" method="post">
     @csrf
-    <label for="nickname">Nickname:</label>
+    <label for="nickname">Anonymous Name:</label>
     <input type="text" id="nickname" name="nickname" required><br>
     
     <label for="rating">Rating (1-5):</label>
@@ -86,7 +91,7 @@
     <label for="review">Review:</label><br>
     <textarea id="review" name="review" rows="4" cols="50" required></textarea><br>
     
-    <label for="recommend">Recommend:</label>
+    <label for="recommend">I would Recommend Website:</label>
     <input type="checkbox" id="recommend" name="recommend" value="1"><br>
     
     <button type="submit">Submit Feedback</button>
@@ -108,3 +113,4 @@
                                        <a class="admin-button" href="">Admin Login</a>
                                    </div>
 </body>
+</html>
