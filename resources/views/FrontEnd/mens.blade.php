@@ -115,7 +115,7 @@
             <footer>
 
                 <ul>
-                    <li><button><a href="checkout.html">Checkout </a></button></li>
+                    <li><button><a href="checkout">Checkout </a></button></li>
 
                 </ul>
 
