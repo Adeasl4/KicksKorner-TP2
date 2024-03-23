@@ -45,6 +45,8 @@ Route::get('/welcome', [TemplateController::class,'welcome']);
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\InventoryController;
+use App\Http\Controllers\FeedbackController;
+
 
 Route::get('/admin', [UserController::class, 'show'])->name('admin.page'); //Show main admin page
 Route::post('/admin/store', [UserController::class, 'store'])->name('users.store'); //Store data
@@ -66,5 +68,5 @@ Route::get('/inventory-management/generate-report', [InventoryController::class,
 route::get('/contact' , [ContactController::class , 'show'])->name('contact.show');
 route::post('/contact' , [ContactController::class , 'send'])->name('contact.send');
 
-
-
+Route::get('/feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
+Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.store');
