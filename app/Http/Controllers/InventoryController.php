@@ -18,7 +18,7 @@ class InventoryController extends Controller
         $warnings = [];
 
         foreach ($products as $product) {
-            if ($product->stock_lvl < $threshold) {
+            if ($product->stock < $threshold) {
                 // Display a notification to the user
                 $warnings[] = 'Low stock alert: '.$product->name.' is low in stock!';
             }
@@ -47,7 +47,7 @@ class InventoryController extends Controller
             'name' => 'required', //Validation rules
             'description' => 'required',
             'price' => 'required',
-            'stock_lvl' => 'required',
+            'stock' => 'required',
             'image_url' => 'required',
         ]);
     
@@ -70,7 +70,7 @@ class InventoryController extends Controller
             'name' => 'required',
             'description' => 'required',
             'price' => 'required',
-            'stock_lvl' => 'required',
+            'stock' => 'required',
             'image_url' => 'required',
         ]);
     
@@ -87,7 +87,7 @@ class InventoryController extends Controller
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
             'price' => $validatedData['price'],
-            'stock_lvl' => $validatedData['stock_lvl'],
+            'stock' => $validatedData['stock'],
             'image_url' => $validatedData['image_url'],
         ]);
 

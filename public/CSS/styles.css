@@ -127,6 +127,7 @@ p {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
 .container {
     display: flex;
     flex-direction: row;
@@ -136,11 +137,11 @@ p {
 }
 
 .table-container {
-    width: 85%;
+    width: 90%;
 }
 
 .btn-container {
-    width: 15%;
+    width: 10%;
     text-align: center;
 }
 

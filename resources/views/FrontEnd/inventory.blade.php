@@ -73,7 +73,7 @@
                         <td>{{ $product->id }}</td>
                         <td>
                             @if ($product->image_url)
-                                <img src="{{ $product->image_url }}" alt="Product Image" style="max-width: 100px;">
+                                <img src="{{ asset($product->image_url) }}" alt="Product Image" style="max-width: 100px;">
                             @else
                                 No Image Available
                             @endif
@@ -81,7 +81,7 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>
-                        <td>{{ $product->stock_lvl }}</td>
+                        <td>{{ $product->stock }}</td>
                         <td>
                             <a class="update-btn" 
                             data-toggle="modal" 
@@ -95,6 +95,7 @@
                 @endforeach
             </tbody>
         </table>
+        <br><br>
     </div>
 
     <!--buttons-->
@@ -134,8 +135,8 @@
             <label for="price">Price:</label>
             <input type="number" min="1" step="0.01" name="price" id="price" required><br><br>
 
-            <label for="stock_lvl">Stock:</label>
-            <input type="number" name="stock_lvl" id="stock_lvl" required><br><br>
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" id="stock" required><br><br>
 
             <label for="image_url">Image URL:</label>
             <input type="text" name="image_url" id="image_ul" required><br><br>
@@ -178,8 +179,8 @@
                         <label for="update_price">Price:</label>
                         <input type="number" min="1" step="0.01" name="price" id="update_price{{ $product->id }}" value="{{ $product->price }}" required><br><br>
 
-                        <label for="update_stock_lvl">Stock:</label>
-                        <input type="number" min="1" step="1" name="stock_lvl" id="update_stock_lvl{{ $product->id }}" value="{{ $product->stock_lvl }}" required><br><br>
+                        <label for="update_stock">Stock:</label>
+                        <input type="number" min="0" step="1" name="stock" id="update_stock{{ $product->id }}" value="{{ $product->stock }}" required><br><br>
 
                         <label for="update_image_url">Image URL:</label>
                         <input type="text" name="image_url" id="update_image_url{{ $product->id }}" value="{{ $product->image_url }}" required><br><br>
@@ -241,7 +242,7 @@
             // Extract labels (product names) and data (stock levels) from products
             products.forEach(function(product) {
                 labels.push(product.name);
-                data.push(product.stock_lvl);
+                data.push(product.stock);
             });
 
             // Create a bar chart
