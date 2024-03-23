@@ -171,19 +171,19 @@
                         <p>Trainers</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/Shoe.png" alt="" class="card-img">
+                        <img src="Images/boot.jpg" alt="" class="card-img">
                         <p>Boots</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/Shoe.png" alt="" class="card-img">
+                        <img src="Images/sandal.jpg" alt="" class="card-img">
                         <p>Sandals</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/Shoe.png" alt="" class="card-img">
+                        <img src="Images/formal.jpg" alt="" class="card-img">
                         <p>Formal Shoes</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/Shoe.png" alt="" class="card-img">
+                        <img src="Images/converse.jpg" alt="" class="card-img">
                         <p>Converse</p>
                     </div>
                 </div>
