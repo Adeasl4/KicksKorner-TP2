@@ -3,72 +3,96 @@
         "id": 1,
         "name": "Nike Donne Air Max",
         "price": 105,
-        "image": "pics/Nike SB Zoom Pogo Plus Premium Skate Shoes (Summit White).jpeg"
+        "image": "pics/Nike SB Zoom Pogo Plus Premium Skate Shoes (Summit White).jpeg",
+        "description": "Nike Donne Air Max: Stylish and comfortable sneakers designed specifically for women, featuring the iconic Air Max cushioning for ultimate support.",
+        "stock": 50
     },
     {
         "id": 2,
         "name": "Adidas Campus 00s Unisex",
         "price": 90,
-        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg"
+        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg",
+        "description": "Adidas Campus 00s Unisex: Retro-inspired sneakers offering timeless style and comfort for everyone.",
+        "stock": 50
     },
     {
         "id": 3,
         "name": "New Balance 550",
         "price": 150,
-        "image": "pics/download (4).jpeg"
+        "image": "pics/download (4).jpeg",
+        "description": "New Balance 550: Classic sneakers known for their timeless design and comfort, suitable for everyday wear.",
+        "stock": 50
     },
     {
         "id": 4,
         "name": "Birkenstocks Boston Clogs",
         "price": 80,
-        "image": "pics/Birkenstock Boston Suede Soft Footbed Clogs.jpeg"
+        "image": "pics/Birkenstock Boston Suede Soft Footbed Clogs.jpeg",
+        "description": "Birkenstock Boston Clogs: Classic clogs with a timeless design, renowned for comfort and durability.",
+        "stock": 50
     },
     {
         "id": 5,
         "name": "New Balance 1906D Unisex",
         "price": 140,
-        "image": "pics/New Balance Unisex 1906D.jpeg"
+        "image": "pics/New Balance Unisex 1906D.jpeg",
+        "description": "New Balance 1906D Unisex: Versatile sneakers offering comfort and style for all genders, featuring a sleek design and durable construction for everyday wear.",
+        "stock": 50
     },
     {
         "id": 6,
         "name": "Vans Skate Slip-On",
         "price": 80,
-        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg "
+        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg ",
+        "description": "Vans Skate Slip-On: Classic skate shoes with an easy slip-on design, perfect for effortless style and performance on the board.",
+        "stock": 50
     },
     {
         "id": 7,
         "name": "Converse Lows",
         "price": 72,
-        "image": "pics/low converse brown.jpeg"
+        "image": "pics/low converse brown.jpeg",
+        "description": "Converse Lows: Iconic sneakers known for their low-cut silhouette, offering timeless style and versatility for any occasion.",
+        "stock": 50
     },
     {
         "id": 8,
         "name": "Nike Mid Blazer 77",
         "price": 140,
-        "image": "pics/Pumpkin Spice nike high.jpeg"
+        "image": "pics/Pumpkin Spice nike high.jpeg",
+        "description": "Nike Mid Blazer 77: Retro-inspired mid-top sneakers blending classic design with modern comfort for a stylish look on and off the court.",
+        "stock": 50
     },
     {
         "id": 9,
         "name": "Adidas Gazelle Unisex",
         "price": 75,
-        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg",
+        "description": "Adidas Gazelle Unisex: Timeless sneakers featuring a sleek design and comfortable fit, suitable for all genders and occasions.",
+        "stock": 50
     },
     {
         "id": 10,
         "name": "Reebok Club C Revenge",
         "price": 95,
-        "image": "pics/Club C Revenge Vintage Sneaker red.jpeg"
+        "image": "pics/Club C Revenge Vintage Sneaker red.jpeg",
+        "description": "Reebok Club C Revenge: Classic sneakers with a modern twist, combining timeless style and comfort for everyday wear.",
+        "stock": 50
     },
     {
         "id": 11,
         "name": "Converse Comme De Garcons",
         "price": 80,
-        "image": "pics/Play Red Heart Converse Chuck All Star '70 High.jpeg"
+        "image": "pics/Play Red Heart Converse Chuck All Star '70 High.jpeg",
+        "description": "Converse Comme des Garçons: Collaborative sneakers blending Converse's iconic design with Comme des Garçons' avant-garde aesthetic for a unique and stylish look.",
+        "stock": 50
     },
     {
         "id": 12,
         "name": "Adidas OG Sambas",
         "price": 150,
-        "image": "pics/adidas Samba.jpeg"
+        "image": "pics/adidas Samba.jpeg",
+        "description": "Adidas OG Sambas: Iconic sneakers with a classic soccer-inspired design, featuring a leather upper and gum rubber outsole for timeless style and durability.",
+        "stock": 50
     }
 ]

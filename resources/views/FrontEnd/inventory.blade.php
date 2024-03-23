@@ -43,14 +43,15 @@
         @endforeach
     @endif
     
-     <!-- Search Bar -->
-    <form action="{{ route('inventory.search') }}" method="GET">
-        <input type="text" name="query" placeholder="Search inventory...">
-        <button type="submit">Search</button>
-    </form><br>
+
 
     <div class="container">
     <div class="table-container">
+        <br>
+        <form action="{{ route('inventory.search') }}" method="GET" class="search-form">
+            <input type="text" name="query" placeholder="Search inventory..." class="search-input">
+            <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
+        </form><br>
         <table class="styled-table">
             <thead>
                 <tr>
@@ -100,6 +101,7 @@
 
     <!--buttons-->
     <div class="btn-container">
+        <br><br><br>
         <br><button type="button" class="add-btn" data-toggle="modal" data-target="#addProductModal">
             Add Product
         </button>

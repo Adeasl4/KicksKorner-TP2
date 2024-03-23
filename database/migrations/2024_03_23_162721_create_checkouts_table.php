@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained()->onDelete('cascade'); // FK to users (renamed from 'customer_id' for clarity)
             $table->integer('quantity');
             $table->decimal('total_price', 10, 2); // Adjust precision as needed
+            $table->enum('status', ['incoming', 'processed'])->default('incoming');
             $table->timestamps();
         });
     }

@@ -26,7 +26,8 @@ class ProductsTableSeeder extends Seeder
                     'name' => $value->name,
                     'price' => $value->price,
                     'image_url' => $value->image,
-                    // Add any other necessary fields here
+                    'description' => $value->description,
+                    'stock' => $value->stock,
                     'created_at' => now(),
                     'updated_at' => now(),
                 ]);

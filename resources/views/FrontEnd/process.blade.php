@@ -38,30 +38,37 @@
     <h1> Process Orders </h1>
 
     <div class="container">  
-    <div class="styled-table">     
+    <div class="table-container">
     <form action="{{ route('process.orders') }}" method="POST">
     @csrf
     <!-- Table to display transactions -->
     <br>
-    <table>
+    <table class="styled-table">
         <thead>
             <tr>
                 <th>Transaction ID</th>
-                <th>Name</th>
-                <th>Products Ordered</th>
+                <th>Customer ID</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
                 <th>Total</th>
-                <th>Action</th>
+                <th>Status</th>
+                <th>Process?</th>
             </tr>
         </thead>
         <tbody>
             @foreach($transactions as $transaction)
                 <tr>
                     <td>{{ $transaction->id }}</td>
-                    <td>{{ $transaction->name }}</td>
-                    <td>{{ $transaction->products_ordered }}</td>
-                    <td>{{ $transaction->total }}</td>
-                    <td><input type="checkbox" name="transaction_ids[]" value="{{ $transaction->id }}"></td>
-                </tr>
+                    <td>{{ $transaction->user_id }}</td>
+                    <td>{{ $transaction->product_id }}</td>
+                    <td>{{ $transaction->quantity }}</td>
+                    <td>{{ $transaction->total_price }}</td>
+                    <td>{{ $transaction->status }}</td>
+                    <td>
+                    @if($transaction->status !== 'processed')
+                        <input type="checkbox" name="transaction_ids[]" value="{{ $transaction->id }}">
+                    @endif
+                </td>                </tr>
             @endforeach
         </tbody>
     </table>

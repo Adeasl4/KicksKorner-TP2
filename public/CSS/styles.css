@@ -193,6 +193,36 @@ p {
     color: black;
 }
 
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #fcd12a;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #e0c52f;
+}
+
+.search-button i {
+    font-size: 18px;
+}
+
+
 .footer {
     overflow: auto;
     background-color: #000;
