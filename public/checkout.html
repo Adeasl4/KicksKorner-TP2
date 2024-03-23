@@ -1,76 +1,72 @@
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> checkout</title>
+  <title>Checkout</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="CSS/style3.css">
-<script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="CSS/style3.css">
+  <script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <div class="product-container">
-
   <div class="details">
     <h1 class="cost">Secure Payments</h1>
     <h3 class="title">KickKorner</h3>
   </div>
 </div>
-<div class="card-container">
-  <div class="mastercard">
-    <div class="logo"></div>
-    <div class="name">mastercard</div>
-  </div>
-  <div class="class=fa-brands fa-cc-visa">
-    <div class="logo"></div>
-    <div class="name">visa</div>
-  </div>
-  <div class="card-details">
-    <div class="card-number field">
-      <label for="cn">CARD NUMBER</label>
-      <input id="cn" type="number" />
-    </div>
-    <div class="card-name field">
-      <label for="cna">NAME ON CARD</label>
-      <input id="cna" type="text" />
-    </div>
-    <div class="expires field">
-      <label for="exp">EXPIRES</label>
-      <input id="exp" type="number" />
-    </div>
-    <div class="cvc field">
-      <label for="cvc">CVC</label>
-      <input id="cvc" type="number" />
-    </div>
-  </div>
-  <button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+
+<!-- Simplified representation of cart items for demonstration -->
+<div id="cartItems">
+  <!-- Cart items would be dynamically populated here -->
 </div>
 
-<!-- Add this script section to your HTML file -->
+<button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    function generateRandomOrderNumber() {
-      return Math.floor(Math.random() * 1000000) + 1; // Change the range or format as needed
-    }
+// Existing functions related to your cart system remain unchanged
 
-    function showThankYouPopup() {
-      const orderNumber = generateRandomOrderNumber();
-      const popupMessage = `Thanks for ordering! Your order number is: ${orderNumber}`;
+document.querySelector('.purchase-button').addEventListener('click', function() {
+    processCheckout();
+});
 
-      alert(popupMessage); // You can use a more sophisticated popup library for a better user experience
-    }
+function processCheckout() {
+    // Ensure carts is up-to-date with any changes made just before checkout
+    carts = JSON.parse(localStorage.getItem('cart')) || [];
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const purchaseButton = document.querySelector('.purchase-button');
-      if (purchaseButton) {
-        purchaseButton.addEventListener('click', showThankYouPopup);
-      }
+    fetch('/checkout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            carts // This sends the current cart items to your backend
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Success response handling here
+        console.log(data);
+        alert('Checkout successful!');
+        // Optionally, clear the cart in local storage and UI after successful checkout
+        localStorage.removeItem('cart');
+        carts = [];
+        addCartToHtml(); // Update the cart UI to reflect the empty cart
+    })
+    .catch(error => {
+        console.error('Checkout error:', error);
+        alert('Checkout failed. Please try again.');
     });
-  </script>
-
-
+}
+</script>
 </body>
 </html>
+

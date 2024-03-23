@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Vans Checkered Slip-Ons ",
+        "price": 80,
+        "image": "pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "New Balance 550",
+        "price": 85,
+        "image": "pics/New Balance Unisex 550.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "New Balance GW500",
+        "price": 90,
+        "image": "pics/New Balance GW500 - Sneakers laag - stone pink.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Reebok Classic Club",
+        "price": 90,
+        "image": "pics/Reebok Classic CLUB GROUNDS UNISEX - Trainers - chalk_core black_gum.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Converse Chuck Taylor",
+        "price": 75,
+        "image": "pics/WOMENS CONVERSE CHUCK TAYLOR ALL-STARS LIFT - Red _ 6.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "Converse AS-1 Pro Ox Shoes",
+        "price": 87,
+        "image": "pics/Converse AS-1 Pro Ox Shoes - Black _ White _ Gum.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Nike Dunk Lows",
+        "price": 100,
+        "image": "pics/nikes.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Birkenstock Lutry Clog",
+        "price": 82,
+        "image": "pics/Birkenstock Lutry Clog in Black, Men's at Urban Outfitters.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "Crocs",
+        "price": 95,
+        "image": "pics/Crocs.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Converse Chuck Taylor",
+        "price": 95,
+        "image": "pics/Brown converse.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Adidas Gazelle Unisex ",
+        "price": 75,
+        "image": "pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    }
+]
