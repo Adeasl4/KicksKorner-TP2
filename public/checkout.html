@@ -25,6 +25,18 @@
     <button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
 </div>
 
+<!-- Custom Modal Start -->
+<div id="customModal" class="custom-modal">
+    <div class="custom-modal-content">
+        <span class="close-button">×</span>
+        <h2>Thank You</h2>
+        <p>Our company values each and every customer. If you have any questions or feedback, please don't hesitate to reach out.</p>
+        <p>Your order number is: <span id="orderNumber"></span></p>
+        <button class="modal-done-button">DONE</button>
+    </div>
+</div>
+<!-- Custom Modal End -->
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -36,24 +48,15 @@ function displayCartItems() {
     let totalCost = 0;
 
     carts.forEach(function(cartItem) {
-        
         let cartItemDiv = document.createElement('div');
         cartItemDiv.classList.add('cart-item');
-
-        
         let cartItemDetails = document.createElement('p');
         cartItemDetails.textContent = `${cartItem.name} - $${cartItem.price} x ${cartItem.quantity}`;
-
-        
         cartItemDiv.appendChild(cartItemDetails);
-
-        
         document.getElementById('cartItems').appendChild(cartItemDiv);
-
         totalCost += cartItem.price * cartItem.quantity;
     });
 
-    
     document.getElementById('totalCost').textContent = totalCost.toFixed(2);
 }
 
@@ -72,14 +75,44 @@ function processCheckout() {
     })
     .then(response => response.json())
     .then(data => {
-        alert(`Your order number is: ${data.orderNumber}`);
+        showModal(data.orderNumber);
         localStorage.removeItem('cart');
-        
     })
     .catch(error => {
         console.error('Checkout error:', error);
         alert('Checkout failed. Please try again.');
     });
+}
+
+function showModal(orderNumber) {
+    document.getElementById('orderNumber').textContent = orderNumber;
+    document.getElementById('customModal').style.display = 'block';
+}
+
+// Get the modal
+var modal = document.getElementById('customModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close-button")[0];
+
+// Get the DONE button element that also closes the modal
+var doneButton = document.getElementsByClassName("modal-done-button")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks on DONE button, close the modal
+doneButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 </script>
 
