@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Checkout</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="CSS/style3.css">
-  <script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ asset('css/style3.css') }}">
+    <script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="product-container">
-  <div class="details">
-    <h1 class="cost">Secure Payments</h1>
-    <h3 class="title">KickKorner</h3>
-  </div>
+    <div class="details">
+        <h1 class="cost">Secure Payments</h1>
+        <h3 class="title">KickKorner</h3>
+    </div>
 </div>
 
-<!-- Simplified representation of cart items for demonstration -->
-<div id="cartItems">
-  <!-- Cart items would be dynamically populated here -->
+<div id="cartItems" class="checkout-container">
+    
 </div>
 
-<button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+<div class="container">
+    <p class="total-cost">Total Cost: $<span id="totalCost">0.00</span></p>
+    <button class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-// Existing functions related to your cart system remain unchanged
+document.addEventListener('DOMContentLoaded', function () {
+    displayCartItems();
+});
+
+function displayCartItems() {
+    let carts = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalCost = 0;
+
+    carts.forEach(function(cartItem) {
+        
+        let cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart-item');
+
+        
+        let cartItemDetails = document.createElement('p');
+        cartItemDetails.textContent = `${cartItem.name} - $${cartItem.price} x ${cartItem.quantity}`;
+
+        
+        cartItemDiv.appendChild(cartItemDetails);
+
+        
+        document.getElementById('cartItems').appendChild(cartItemDiv);
+
+        totalCost += cartItem.price * cartItem.quantity;
+    });
+
+    
+    document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+}
 
 document.querySelector('.purchase-button').addEventListener('click', function() {
     processCheckout();
 });
 
 function processCheckout() {
-    // Ensure carts is up-to-date with any changes made just before checkout
-    carts = JSON.parse(localStorage.getItem('cart')) || [];
-
+    let carts = JSON.parse(localStorage.getItem('cart')) || [];
     fetch('/checkout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            carts // This sends the current cart items to your backend
-        })
+        body: JSON.stringify({carts})
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-        // Success response handling here
-        console.log(data);
-        alert('Checkout successful!');
-        // Optionally, clear the cart in local storage and UI after successful checkout
+        alert(`Your order number is: ${data.orderNumber}`);
         localStorage.removeItem('cart');
-        carts = [];
-        addCartToHtml(); // Update the cart UI to reflect the empty cart
+        
     })
     .catch(error => {
         console.error('Checkout error:', error);
@@ -67,6 +82,6 @@ function processCheckout() {
     });
 }
 </script>
+
 </body>
 </html>
-
