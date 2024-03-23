@@ -40,7 +40,11 @@
         <div class="filter">
 
             <div class=" section" id="main">
-                <button class="openbtn" onclick="openNav()" href="show-filter">Show Filter</button>
+                <!-- search field-->
+                <div class="search">
+                    <input type="search" name="name" id="search-input" placeholder="Search product name here..">
+                </div>
+                <!---->
                 <p>12 results</p>
 
                 <div class="dropdown">
@@ -54,58 +58,14 @@
                 </div>
             </div>
 
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <div class="brands">
-                    <h4>Brands</h4>
-
-                    <label id="brands" for="brand1">
-                        <input type="checkbox" value="Nike">Nike
-                    </label><br>
-
-                    <label id="brands" for="brand1">
-                        <input type="checkbox" value="NewB">New Balance
-                    </label><br>
-
-                    <label for="brand1" id="brands">
-                        <input type="checkbox" value="Converse">Converse
-                    </label><br>
-
-                    <label for="brand1" id="brands">
-                        <input type="checkbox" value="Adidas">Adidas
-                    </label><br>
-
-                    <label for="brand1" id="brands">
-                        <input type="checkbox" value="Vans">Vans
-                    </label><br>
-
-                    <label for="brand1" id="brands">
-                        <input type="checkbox" value="Crocs">Crocs
-                    </label><br>
 
 
-
-
-                </div>
-
-
-                <div class="category">
-                    <h4>Categories</h4>
-                    <ul class="types">
-                        <li>Loafers</li>
-                        <li>High Tops</li>
-                        <li>Low Tops</li>
-                        <li>Slids </li>
-                    </ul>
-                </div>
-
-            </div>
 
         </div>
 
         <br>
-
-        <div class="listProduct">
+        <!-- change to id-->
+        <div id="listProduct">
             <div class="item">
                 <!-- <img src="images/Nike Air VaporMax Plus Women's Shoes (Cedar).jpeg " alt="nikevapour">
                 <h2>NAME OF PRODUCT</h2>
@@ -146,9 +106,11 @@
     </div>
     <br>
 
-
+    <!---->
+    <script src="filter k.js"></script>
 
     <script src="kidskicks.js"></script>
+
 </body>
 <footer>
     <div class="footer">
