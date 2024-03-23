@@ -145,7 +145,7 @@ header .icon-cart span {
 .dropdown-content {
     background-color: white;
     color: rgb(49, 49, 49);
-    padding: 20px 18px;
+    padding: 15px 18px;
     font-size: 11.5px;
     border-style: none;
     border-left-style: solid;
@@ -157,110 +157,50 @@ header .icon-cart span {
 
 }
 
+/***/
+.search {
 
-
-
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-
-#brands {
-
-    color: #f7bd03;
-    display: block;
-    position: relative;
-}
-
-
-
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    color: #0b0b0b;
-    text-decoration: none;
+    align-items: center;
 
 }
 
-.openbtn {
-    cursor: pointer;
-    color: rgb(49, 49, 49);
-    text-align: center;
-    text-decoration: none;
-    padding: 16px 18px;
-    text-decoration: none;
-    font-size: 11.5px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: none;
-    border-right-style: solid;
-    border-width: thin;
-    border-color: #ccc;
-    display: inline-block;
-    background-color: white;
-}
-
-.openbtn:hover {
-    color: #b4b3b3;
-}
-
-#show {
-    transition: margin-left .5s;
+#search-input {
     padding: 10px;
+    border-radius: 10px;
 }
 
+/***/
 
 
 
 
 
-
-
-
-
-
-
-
-
-.listProduct .item img {
+#listProduct .item img {
     width: 267px;
     height: 250px;
     object-fit: cover;
 
 }
 
-.listProduct .item img:hover {
+#listProduct .item img:hover {
 
     opacity: 0.6;
 }
 
-.listProduct {
+#listProduct {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     width: auto;
 }
 
-.listProduct .item {
+#listProduct .item {
     background-color: rgb(254, 254, 254);
 
 
 }
 
-.listProduct .item h2 {
+#listProduct .item h2 {
     text-align: left;
     font-weight: 500px;
     font-size: small;
@@ -269,7 +209,7 @@ header .icon-cart span {
     color: #3a3a3a;
 }
 
-.listProduct .item .price {
+#listProduct .item .price {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
     padding-left: 12px;
@@ -277,7 +217,7 @@ header .icon-cart span {
     font-size: 12px;
 }
 
-.listProduct .item button {
+#listProduct .item button {
     background-color: black;
     color: #ccc;
     padding-top: 12px;
@@ -290,7 +230,7 @@ header .icon-cart span {
     cursor: pointer;
 }
 
-.listProduct .item button:active {
+#listProduct .item button:active {
     background-color: #9b9a9a;
     color: #0b0b0b;
     box-shadow: 0 3px #b4b3b3;
