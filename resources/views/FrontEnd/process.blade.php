@@ -27,13 +27,51 @@
                                 <a href="{{ route('inventory.management') }}">Inventory Management</a>
                             </li>
                             <li class="underline">
-                                <a href="{{ route('process.orders') }}">Process Orders</a>
+                                <a href="{{ route('process.index') }}">Process Orders</a>
                             </li>
                         </ul>
                         <ul>
                     </li>
                 </ul>
             </div>
+
+    <h1> Process Orders </h1>
+
+    <div class="container">  
+    <div class="styled-table">     
+    <form action="{{ route('process.orders') }}" method="POST">
+    @csrf
+    <!-- Table to display transactions -->
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Name</th>
+                <th>Products Ordered</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($transactions as $transaction)
+                <tr>
+                    <td>{{ $transaction->id }}</td>
+                    <td>{{ $transaction->name }}</td>
+                    <td>{{ $transaction->products_ordered }}</td>
+                    <td>{{ $transaction->total }}</td>
+                    <td><input type="checkbox" name="transaction_ids[]" value="{{ $transaction->id }}"></td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+
+    <div class="btn-container">
+    <button type="submit" class="update-btn">Process Selected Orders</button>
+    </div>
+</form>
+</div>
 
 
 <div class="footer">
