@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Nike Donne Air Max",
+        "price": 105,
+        "image": "/Images/pics/Nike SB Zoom Pogo Plus Premium Skate Shoes (Summit White).jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "pics/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "New Balance 550",
+        "price": 150,
+        "image": "/Images/pics/download (4).jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Birkenstocks Boston Clogs",
+        "price": 80,
+        "image": "/Images/pics/Birkenstock Boston Suede Soft Footbed Clogs.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "New Balance 1906D Unisex",
+        "price": 140,
+        "image": "/Images/pics/New Balance Unisex 1906D.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Vans Skate Slip-On",
+        "price": 80,
+        "image": "/Images/pics/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.jpeg "
+    },
+    {
+        "id": 7,
+        "name": "Converse Lows",
+        "price": 72,
+        "image": "/Images/pics/low converse brown.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "Nike Mid Blazer 77",
+        "price": 140,
+        "image": "/Images/pics/Pumpkin Spice nike high.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "Adidas Gazelle Unisex",
+        "price": 75,
+        "image": "/Images/pics/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "Reebok Club C Revenge",
+        "price": 95,
+        "image": "/Images/pics/Club C Revenge Vintage Sneaker red.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Converse Comme De Garcons",
+        "price": 80,
+        "image": "/Images/pics/Play Red Heart Converse Chuck All Star '70 High.jpeg"
+    },
+    {
+        "id": 12,
+        "name": "Adidas OG Sambas",
+        "price": 150,
+        "image": "/Images/pics/adidas Samba.jpeg"
+    }
+]

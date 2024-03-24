@@ -33,11 +33,11 @@
             window.onload = preloader;
         </script>
         <div class="wrapper">
-            <div class="nav">
+        <div class="nav">
                 <ul>
                     <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
                     <li>
-                        <ul>
+                        <ul class="categories">
                             <li class="underline" id="men">
                                 <a href="http://127.0.0.1:8000/mens">Men</a>
                                 <div class="dropdown-container-men">
