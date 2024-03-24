@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name":"Nike Donne Air Max",
+        "price": 105,
+        "image": "Images/image/Nike SB Zoom Pogo Plus Premium Skate Shoes (Summit White).png"
+    },
+    {
+        "id": 2,
+        "name":" Adidas Campus 00s Unisex",
+        "price": 85,
+        "image": "Images/image/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.png"
+    },
+    {
+        "id": 3,
+        "name":" New Balance 550",
+        "price": 150,
+        "image": "Images/image/download (4).png"
+    },
+    {
+        "id": 4,
+        "name":" Birkenstocks Boston Clogs",
+        "price": 80,
+        "image":  "Images/image/Birkenstock Boston Suede Soft Footbed Clogs.png"
+    },
+    {
+        "id": 5,
+        "name":" New Balance 1906D Unisex",
+        "price": 90,
+        "image": "Images/image/New Balance Unisex 1906D.png"
+    },
+    {
+        "id": 6,
+        "name":" Vans Skate Slip-On",
+        "price": 75,
+        "image": "Images/image/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.png "
+    },
+    {
+        "id": 7,
+        "name":" Converse Lows",
+        "price": 87,
+        "image": "Images/image/low converse brown.png"
+    },
+    {
+        "id": 8,
+        "name":" Converse Lows",
+        "price": 200,
+        "image": "Images/image/Pumpkin Spice nike high.png"
+    },
+    {
+        "id": 9,
+        "name":" Adidas Gazelle Unisex",
+        "price": 82,
+        "image": "Images/image/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.png"
+    },
+    {
+        "id": 10,
+        "name":" Reebok Club C Revenge",
+        "price": 95,
+        "image": "Images/image/Club C Revenge Vintage Sneaker red.png"
+    },
+    {
+        "id": 11,
+        "name":" Adidas OG Sambas",
+        "price": 65,
+        "image": "Images/image/Play Red Heart Converse Chuck All Star '70 High.png"
+    },
+    {
+        "id": 12,
+        "name":" Adidas Gazelle Unisex",
+        "price": 75,
+        "image": "Images/image/adidas Samba.png"
+    }
+
+]

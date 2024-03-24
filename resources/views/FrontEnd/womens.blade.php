@@ -5,191 +5,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Womens Shoes</title>
-    <link rel="stylesheet" href="/CSS/mens.css">
+    <title>Women's Shoes</title>
+    <link rel="stylesheet" type="text/css" href="CSS/mens-style.css">
     <script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="">
-            <div class="nav">
+<div class="nav">
                 <ul>
                     <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
                     <li>
-                    <ul class="categories">
-                    <li class="underline" id="men">
-                        <a href="#">Men</a>
-                        <div class="dropdown-container-men">
-                            <div class="drop-col">
-                                <a class="dropdown" href="#">Men's Products 1</a>
-                                <a class="dropdown" href="#">Men's Products 2</a>
-                                <a class="dropdown" href="#">Men's Products 3</a>
-                                <a class="dropdown" href="#">Men's Products 4</a>
-                                <a class="dropdown" href="#">Men's Products 5</a>
-                                <a class="dropdown" href="#">Men's Products 6</a>
-                            </div>
-                        </div>
+                        <ul>
+                            <li class="underline" id="men">
+                                <a href="http://127.0.0.1:8000/mens">Men</a>
+                                <div class="dropdown-container-men">
+                                    <div class="drop-col">
+                                        <a class="dropdown" href="#">Men's Products 1</a>
+                                        <a class="dropdown" href="#">Men's Products 2</a>
+                                        <a class="dropdown" href="#">Men's Products 3</a>
+                                        <a class="dropdown" href="#">Men's Products 4</a>
+                                        <a class="dropdown" href="#">Men's Products 5</a>
+                                        <a class="dropdown" href="#">Men's Products 6</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="underline" id="women">
+                                <a href="http://127.0.0.1:8000/womens">Women</a>
+                                <div class="dropdown-container-women">
+                                    <div class="drop-col">
+                                        <a class="dropdown" href="#">Women's Products 1</a>
+                                        <a class="dropdown" href="#">Women's Products 2</a>
+                                        <a class="dropdown" href="#">Women's Products 3</a>
+                                        <a class="dropdown" href="#">Women's Products 4</a>
+                                        <a class="dropdown" href="#">Women's Products 5</a>
+                                        <a class="dropdown" href="#">Women's Products 6</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="underline" id="kids">
+                                <a href="http://127.0.0.1:8000/kids">Kids</a>
+                                <div class="dropdown-container-kids">
+                                    <div class="drop-col">
+                                        <a class="dropdown" href="#">Kid's Products 1</a>
+                                        <a class="dropdown" href="#">Kid's Products 2</a>
+                                        <a class="dropdown" href="#">Kid's Products 3</a>
+                                        <a class="dropdown" href="#">Kid's Products 4</a>
+                                        <a class="dropdown" href="#">Kid's Products 5</a>
+                                        <a class="dropdown" href="#">Kid's Products 6</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
-                    <li class="underline" id="women">
-                        <a href="#">Women</a>
-                        <div class="dropdown-container-women">
-                            <div class="drop-col">
-                                <a class="dropdown" href="#">Women's Products 1</a>
-                                <a class="dropdown" href="#">Women's Products 2</a>
-                                <a class="dropdown" href="#">Women's Products 3</a>
-                                <a class="dropdown" href="#">Women's Products 4</a>
-                                <a class="dropdown" href="#">Women's Products 5</a>
-                                <a class="dropdown" href="#">Women's Products 6</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="underline" id="kids">
-                        <a href="#">Kids</a>
-                        <div class="dropdown-container-kids">
-                            <div class="drop-col">
-                                <a class="dropdown" href="#">Kid's Products 1</a>
-                                <a class="dropdown" href="#">Kid's Products 2</a>
-                                <a class="dropdown" href="#">Kid's Products 3</a>
-                                <a class="dropdown" href="#">Kid's Products 4</a>
-                                <a class="dropdown" href="#">Kid's Products 5</a>
-                                <a class="dropdown" href="#">Kid's Products 6</a>
-                            </div>
-                        </div>
+                    <li>
+                        <ul class="functions underline">
+                            <li><a href="http://127.0.0.1:8000/login">Login</a></li>
+                            <li><a href="http://127.0.0.1:8000/register">Sign Up</a></li>
+                        </ul>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <ul class="functions underline">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-    <div class="container">
+               
+            </div>
+
+
+
+                <div class="container">
         <header>
-            <h1>WOMEN'S KICKS</h1>
+            <div class="title">WOMEN'S KICKS</div>
             <div class="icon-cart">
-                <img src="Images/pics/shopping-bag.svg">
-                <span class="quantity">0</span>
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
             </div>
         </header>
-
-
-        <div class="filter">
-
-            <div class=" section" id="main">
-                <button class="openbtn" onclick="openNav()" href="show-filter">Show Filter</button>
-                <p>12 results</p>
-
-                <div class="dropdown">
-                    <select class="dropdown-content" id="d-c" name="dropBox">
-                        <option>Sort-By</option>
-                        <option>Highest to Lowest</option>
-                        <option>Lowest to Highest</option>
-                        <option>Newest</option>
-                        <option>Popular</option>
-                    </select>
-                </div>
-            </div>
-
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <div class="search">
-                <input type="search" name="name" id="search-input" placeholder="Search product name here..">
-                </div>
-    
-
-
-                <div class="category">
-                    <h4>Categories</h4>
-                    <ul class="types">
-                        <li>Loafers</li>
-                        <li>High Tops</li>
-                        <li>Low Tops</li>
-                        <li>Slids </li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-        <br>
-
-
-
         <div class="listProduct">
-            <div class="item">
-                <!-- <img src="images/Nike Air VaporMax Plus Women's Shoes (Cedar).jpeg " alt="nikevapour">
-                <h2>NAME OF PRODUCT</h2>
-                <div class="price">£105</div>
-                <button class="addCart">Add to Cart</button>-->
-            </div>
 
         </div>
-
-
     </div>
-
-
     <div class="cartTab">
-        <h1>Your Cart</h1>
+        <h1>Shopping Cart</h1>
         <div class="listCart">
-
-            <div class="item">
-                <!-- <div class="image">
-                        <img src="images/Nike Air VaporMax Plus Women's Shoes (Cedar).jpeg " alt="nikevapour">
-                    </div>
-                    <div class="name">NAME</div>
-                    <div class="totalPrice"> £105</div>
-                    <div class="quantity">
-                        <span class="minus">
-                            < </span>
-                                <span class="1">1</span>
-                                <span class="plus">></span>
-                    </div>-->
-            </div>
-
-
-
-
+            
         </div>
         <div class="btn">
             <button class="close">CLOSE</button>
-            <button class="checkout">Check Out</button>
+            <a href="http://127.0.0.1:8000/checkout" class="checkOut">
+            <button class="checkout-btn">Check Out</button>
+        </a>
         </div>
     </div>
-    <br>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="footer">
-        <p>Follow Us!</p>
-        <div class="socials">
-            <a class="socials-button" href="https://www.instagram.com"><i class="fa fa-brands fa fa-instagram" style="color: #fcd12a;"></i></a>
-            <a class="socials-button" href="https://www.linkedin.com/"><i class="fa fa-brands fa fa-linkedin" style="color: #fcd12a;"></i></a>
-            <a class="socials-button" href="https://twitter.com/"><i class="fa fa-brands fa fa-twitter" style="color: #fcd12a;"></i></a>
-            <a class="socials-button" href="https://www.youtube.com/"><i class="fa fa-brands fa fa-youtube" style="color: #fcd12a;"></i></a>
-        </div>
-        <p>Made With &#128155; By Team 36</p>
-    </div>
-    <script src="JS/womenskicks.js"></script>
-    <script src="JS/filter-women.js"></script>
-    
+                            <a class="admin-button" href="http://127.0.0.1:8000/">Home</a>
+                            <div class="footer-text">
+                                <p>Follow Us!</p>
+                                <div class="socials">
+                                    <a class="socials-button" href="https://www.instagram.com%22%3E/<i class="fa fa-brands fa fa-instagram" style="color: #fcd12a;"></i></a>
+                                    <a class="socials-button" href="https://www.linkedin.com/"><i class="fa fa-brands fa fa-linkedin" style="color: #fcd12a;"></i></a>
+                                    <a class="socials-button" href="https://twitter.com/"><i class="fa fa-brands fa fa-twitter" style="color: #fcd12a;"></i></a>
+                                    <a class="socials-button" href="https://www.youtube.com/"><i class="fa fa-brands fa fa-youtube" style="color: #fcd12a;"></i></a>
+                                </div>
+                                <p>Made With &#128155; By Team 36</p>
+                            </div>
+                            <a class="admin-button" href="http://127.0.0.1:8000/admin/auth/login">Admin Login</a>
+                        </div>
 
-    
+                        <script src="JS/app-women.js"></script>
 </body>
 
 </html>

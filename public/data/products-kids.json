@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name":" Vans Checkered Slip-Ons",
+        "price": 105,
+        "image": "Images/image/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.png"
+    },
+    {
+        "id": 2,
+        "name":" New Balance 550",
+        "price": 85,
+        "image": "Images/image/New Balance Unisex 550.png"
+    },
+    {
+        "id": 3,
+        "name":" New Balance GW500",
+        "price": 150,
+        "image": "Images/image/New Balance GW500 - Sneakers laag - stone pink.png"
+    },
+    {
+        "id": 4,
+        "name":" Reebok Classic Club",
+        "price": 80,
+        "image": "Images/image/Reebok Classic CLUB GROUNDS UNISEX - Trainers - chalk_core black_gum.png"
+    },
+    {
+        "id": 5,
+        "name":" Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "Images/image/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.png"
+    },
+    {
+        "id": 6,
+        "name":" Converse Chuck Taylor",
+        "price": 75,
+        "image": "Images/image/WOMENS CONVERSE CHUCK TAYLOR ALL-STARS LIFT - Red _ 6.png"
+    },
+    {
+        "id": 7,
+        "name":" Converse AS-1 Pro Ox Shoes",
+        "price": 87,
+        "image": "Images/image/Converse AS-1 Pro Ox Shoes - Black _ White _ Gum.png"
+    },
+    {
+        "id": 8,
+        "name":" Nike Dunk Lows",
+        "price": 200,
+        "image": "Images/image/nikes.png"
+    },
+    {
+        "id": 9,
+        "name":" Birkenstock Lutry Clog",
+        "price": 82,
+        "image": "Images/image/Birkenstock Lutry Clog in Black, Men's at Urban Outfitters.png"
+    },
+    {
+        "id": 10,
+        "name":" Crocs",
+        "price": 95,
+        "image": "Images/image/Crocs.png"
+    },
+    {
+        "id": 11,
+        "name":" Converse Chuck Taylor",
+        "price": 65,
+        "image": "Images/image/Brown converse.png"
+    },
+    {
+        "id": 12,
+        "name":" Adidas Gazelle Unisex",
+        "price": 75,
+        "image": "Images/image/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.png"
+    }
+
+]
