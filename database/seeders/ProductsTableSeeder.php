@@ -15,10 +15,10 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        $files = ['productsm.json', 'productsk.json', 'productsw.json'];
+        $files = ['products.json', 'products-women.json', 'products-kids.json'];
 
         foreach ($files as $file) {
-            $json = File::get("database/data/{$file}"); // Adjust path as necessary
+            $json = File::get("public/data/{$file}"); // Adjust path as necessary
             $products = json_decode($json);
 
             foreach ($products as $key => $value) {
