@@ -143,21 +143,8 @@
             </div>
             <div class="about">
                 <div class="text">
-<<<<<<< HEAD
-                    <p style = "text-wrap:wrap; width:50vw;">
-                    Our Goal:<br> 
-                            Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the 
-                            online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers
-                            by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional 
-                            in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair
-                            for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites 
-                            customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.<br>
-                    </p>
-                    <div style = "margin-top:20px;"class="about-buttons">
-=======
                 <p><span style="font-weight: bold; font-size: 1.75em;">Our Goal:</span><br> Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the <br> online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers <br> by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional <br> in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair <br> for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites <br> customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.</p>
                     <div class="about-buttons">
->>>>>>> 5f71426f8f16042d7b16c00428e64d6f1ce02304
                         <a href="http://127.0.0.1:8000/about" class="buttons">About Us</a>
                         <a href="http://127.0.0.1:8000/contact" class="buttons">Contact Us</a>
                         <a href="http://127.0.0.1:8000/feedback/create" class="buttons">Review Us</a>
