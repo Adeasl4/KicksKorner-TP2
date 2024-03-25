@@ -1,3 +1,4 @@
+/* Reset */
 html {
   font-size: 10px;
 }
@@ -11,112 +12,208 @@ h1, h2, h3, p {
   box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
   font-family: 'IBM Plex Mono', monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f2f2f2;
   color: #333;
   line-height: 1.6;
   margin: 0;
-  width: 100%;
-  min-height: 100vh;
+  padding: 0;
 }
 
+/* Main Container */
 .main-container {
   display: flex;
-  flex-direction: column; /* Stack the containers on top of each other by default */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%; /* Take the full width */
-  max-width: 1200px; /* Maximum width of the container */
-  margin: auto; /* Center the container */
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.product-container, .checkout-container, .card-container {
-  border: 5px solid #333;
-  background: #ffff00; /* Adjusted for consistency */
-  width: 75rem;
-  max-width: 45%; /* Adjusted for side-by-side layout */
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem;
   padding: 2rem;
-  margin: 2rem; /* Adjust spacing as needed */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-}
-
-.card-container {
   background-color: #fff;
-  border: 2px solid #333;
-  box-shadow: 0 0 20px rgba(243, 243, 11, 0.845);
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.details .cost, .details .title, .total-cost, 
-.card-details, .mastercard, .field, .purchase-button {
-  font-weight: 600;
+/* Title Styles */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.total-cost {
-  color: #333;
-  font-size: 1.8rem;
+/* Product Container */
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.field input, .purchase-button {
+.product-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.product-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.product-item-details {
+  flex: 1;
+}
+
+/* Checkout Container */
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.checkout-item p {
+  margin: 0;
+}
+
+.checkout-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Cart Container */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+/* Total Cost */
+.total-cost {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Purchase Button */
+.purchase-button {
+  background-color: #333;
+  color: #fff;
   border: none;
-  border-bottom: 2px solid #333;
-  margin-top: 0.5rem;
-  background-color: #000;
-  color: #ffff00;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .purchase-button:hover {
-  background-color: #ffff00;
-  color: #000;
+  background-color: #555;
 }
 
-@media screen and (min-width: 768px) { /* Adjust based on your breakpoint preference */
-  .main-container {
-    flex-direction: row; /* Place the containers side by side on larger screens */
-    justify-content: space-around; /* Space out the containers evenly */
-  }
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 767px) {
-  .product-container, .card-container, .checkout-container {
-    width: 90%; /* Adjust the width for smaller screens */
-    max-width: 100%; /* Ensure it does not exceed the container */
-    margin: 1rem auto; /* Center and add margin around the containers */
-  }
+.card-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card-item p {
+  margin: 0;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-details label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.card-details input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 /* Custom Modal Styles */
 .custom-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 }
 
 .custom-modal-content {
   background-color: #fefefe;
-  margin: 10% auto; /* 10% from the top and centered */
+  margin: 10% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 10px; /* Optional: for rounded corners */
+  border-radius: 10px;
 }
 
 .close-button {
@@ -138,7 +235,7 @@ body {
   color: white;
   border: none;
   padding: 10px 20px;
-  text-align: center;
+  text-align : center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;

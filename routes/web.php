@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,3 +71,4 @@ route::post('/contact' , [ContactController::class , 'send'])->name('contact.sen
 
 Route::get('/feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
 Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.store');
+Route::post('/order', [OrderController::class, 'store']);
