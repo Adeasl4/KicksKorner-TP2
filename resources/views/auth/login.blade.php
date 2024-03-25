@@ -2,6 +2,7 @@
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
+            <!-- <img class="rounded-full w-90 h-90" src="C:\xampp\htdocs\KicksKorner-TP2\resources\views\auth\logo-new.png"> -->
         </x-slot>
 
         <x-validation-errors class="mb-4" />

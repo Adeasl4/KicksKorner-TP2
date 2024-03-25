@@ -33,13 +33,13 @@
             window.onload = preloader;
         </script>
         <div class="wrapper">
-            <div class="nav">
+        <div class="nav">
                 <ul>
-                    <li><img src="Images/logo-new.png" alt="" class="nav-img"></li>
+                    <li><a href="http://127.0.0.1:8000/"><img src="Images/logo-new.png" alt="" class="nav-img"></a></li>
                     <li>
-                        <ul>
+                        <ul class="categories">
                             <li class="underline" id="men">
-                                <a href="http://127.0.0.1:8000/mens">Men</a>
+                                <a href="#">Men</a>
                                 <div class="dropdown-container-men">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Men's Products 1</a>
@@ -52,7 +52,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="women">
-                                <a href="http://127.0.0.1:8000/womens">Women</a>
+                                <a href="#">Women</a>
                                 <div class="dropdown-container-women">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Women's Products 1</a>
@@ -65,7 +65,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="kids">
-                                <a href="http://127.0.0.1:8000/kids">Kids</a>
+                                <a href="#">Kids</a>
                                 <div class="dropdown-container-kids">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Kid's Products 1</a>
@@ -81,8 +81,8 @@
                     </li>
                     <li>
                         <ul class="functions underline">
-                            <li><a href="http://127.0.0.1:8000/login">Login</a></li>
-                            <li><a href="http://127.0.0.1:8000/register">Sign Up</a></li>
+                            <!-- <li><a href="#">Login</a></li> -->
+                            <li><a href="http://127.0.0.1:8000/register">Register / Dashboard</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -143,16 +143,16 @@
             </div>
             <div class="about">
                 <div class="text">
-                    <p>
+                    <p style = "text-wrap:wrap; width:50vw;">
                     Our Goal:<br> 
-                            Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the <br>
-                            online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers <br>
-                            by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional <br>
-                            in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair <br>
-                            for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites <br>
-                            customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.
+                            Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the 
+                            online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers
+                            by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional 
+                            in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair
+                            for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites 
+                            customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.<br>
                     </p>
-                    <div class="about-buttons">
+                    <div style = "margin-top:20px;"class="about-buttons">
                         <a href="http://127.0.0.1:8000/about" class="buttons">About Us</a>
                         <a href="http://127.0.0.1:8000/contact" class="buttons">Contact Us</a>
                         <a href="http://127.0.0.1:8000/feedback/create" class="buttons">Review Us</a>
