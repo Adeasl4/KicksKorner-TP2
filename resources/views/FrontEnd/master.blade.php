@@ -39,7 +39,7 @@
                     <li>
                         <ul class="categories">
                             <li class="underline" id="men">
-                                <a href="#">Men</a>
+                                <a href="http://127.0.0.1:8000/mens">Men</a>
                                 <div class="dropdown-container-men">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Men's Products 1</a>
@@ -52,7 +52,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="women">
-                                <a href="#">Women</a>
+                                <a href="http://127.0.0.1:8000/womens">Women</a>
                                 <div class="dropdown-container-women">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Women's Products 1</a>
@@ -65,7 +65,7 @@
                                 </div>
                             </li>
                             <li class="underline" id="kids">
-                                <a href="#">Kids</a>
+                                <a href="http://127.0.0.1:8000/kids">Kids</a>
                                 <div class="dropdown-container-kids">
                                     <div class="drop-col">
                                         <a class="dropdown" href="#">Kid's Products 1</a>
