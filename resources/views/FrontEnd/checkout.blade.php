@@ -24,8 +24,9 @@
         <div class="container">
             <p class="total-cost">Total Cost: $<span id="totalCost">0.00</span></p>
             <!-- Form for checkout -->
-            <form id="checkoutForm" method="POST" action="/checkout">
+            <form action="{{ route('checkout.process') }}" method="POST" id="checkoutForm">
                 <!-- Hidden input to store total cost -->
+                @csrf
                 <input type="hidden" name="total_cost" id="totalCostInput">
                 <button type="submit" class="purchase-button" data-content="PURCHASE">PURCHASE</button>
             </form>
@@ -105,8 +106,30 @@ function fetchProducts() {
 const purchaseButton = document.querySelector('.purchase-button');
 
 purchaseButton.addEventListener('click', function() {
+
     const orderNumber = Math.floor(Math.random() * 90000) + 10000; // Simple random order number generation
     alert('Thank you for your purchase! Your order number is ' + orderNumber);
+
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cartItems.forEach(item => {
+        // Extract product_id and quantity individually
+        const productId = item.product_id;
+        const quantity = item.quantity;
+
+        // Set the values of hidden inputs
+        const productIdInput = document.createElement('input');
+        productIdInput.type = 'hidden';
+        productIdInput.name = 'product_ids[]'; // Use an array to capture multiple product ids
+        productIdInput.value = productId;
+        document.getElementById('checkoutForm').appendChild(productIdInput);
+
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'hidden';
+        quantityInput.name = 'quantities[]'; // Use an array to capture multiple quantities
+        quantityInput.value = quantity;
+        document.getElementById('checkoutForm').appendChild(quantityInput);
+    });
 
     // Submit the form when the purchase button is clicked
     document.getElementById('checkoutForm').submit();

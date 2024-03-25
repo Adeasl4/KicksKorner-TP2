@@ -73,7 +73,9 @@ route::post('/contact' , [ContactController::class , 'send'])->name('contact.sen
 
 Route::get('/feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
 Route::post('/feedback/store', [FeedbackController::class, 'store'])->name('feedback.store');
-Route::post('/checkout', [CheckoutController::class, 'processCheckout']);
+
+//Route::post('/checkout', [CheckoutController::class, 'processCheckout']);
 Route::post('/checkout', [CheckoutController::class, 'processCheckout'])->name('checkout.process');
-Route::post('/order', [OrderController::class, 'store']);
+
+//Route::post('/order', [OrderController::class, 'store']);
 Route::post('/place-order', [OrderController::class, 'placeOrder'])->name('place-order');

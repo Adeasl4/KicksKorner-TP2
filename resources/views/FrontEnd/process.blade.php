@@ -47,7 +47,6 @@
         <thead>
             <tr>
                 <th>Transaction ID</th>
-                <th>Customer ID</th>
                 <th>Product ID</th>
                 <th>Quantity</th>
                 <th>Total</th>
@@ -59,7 +58,6 @@
             @foreach($transactions as $transaction)
                 <tr>
                     <td>{{ $transaction->id }}</td>
-                    <td>{{ $transaction->user_id }}</td>
                     <td>{{ $transaction->product_id }}</td>
                     <td>{{ $transaction->quantity }}</td>
                     <td>{{ $transaction->total_price }}</td>
