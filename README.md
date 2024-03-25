@@ -35,8 +35,12 @@ type nul > \database\database.sqlite
    ```
    php artisan migrate
    ```
+6.Then run
+  ```
+  php artisan db:seed
+  ```
 
-6.  Serve the website (For the registration/dashboard page you will have to ```npm run dev``` in the terminal, you might also have to run ```npm run update``` before running ```npm run dev``` make sure you are in the right directory when doing this)
+7.  Serve the website (For the registration/dashboard page you will have to ```npm run dev``` in the terminal, you might also have to run ```npm run update``` before running ```npm run dev``` make sure you are in the right directory when doing this)
     ```
     php artisan serve
     ```
