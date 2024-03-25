@@ -106,7 +106,7 @@ p{
   font-size: 20px;
   color: #000;
   opacity: 1;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .titles{
@@ -559,7 +559,7 @@ height: auto;
   border-radius: 25px;
   padding: 10px 10px 10px 10px;
   width: 100px;
-  margin: 0 10px 0 10px;
+  margin: 20px 10px 0 10px;
   transition: 0.25s ease-in-out;
   text-align: center;
 
@@ -567,7 +567,7 @@ height: auto;
 
 .buttons:hover{
   background-color: #000;
-  color: #fff;
+  color: #f7bd03;
 }
 
 .about-img{

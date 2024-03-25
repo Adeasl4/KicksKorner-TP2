@@ -143,15 +143,7 @@
             </div>
             <div class="about">
                 <div class="text">
-                    <p>
-                    Our Goal:<br> 
-                            Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the <br>
-                            online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers <br>
-                            by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional <br>
-                            in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair <br>
-                            for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites <br>
-                            customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.
-                    </p>
+                <p><span style="font-weight: bold; font-size: 1.75em;">Our Goal:</span><br> Kickskorner is dedicated to providing a comprehensive selection of footwear for all ages while simultaneously revolutionizing the <br> online shoe-shopping experience. Beyond just selling shoes, the brand aims to create an immersive and seamless journey for customers <br> by offering innovative features, intuitive interfaces, and exceptional customer support. By bridging the gap between traditional <br> in-store shopping and the convenience of online retail, Kickskorner strives to empower customers to confidently find the perfect pair <br> for any occasion or lifestyle. Through its commitment to redefining the way people shop for shoes online, Kickskorner invites <br> customers to join them on their journey toward crafting a more enjoyable and satisfying shopping experience, one step at a time.</p>
                     <div class="about-buttons">
                         <a href="http://127.0.0.1:8000/about" class="buttons">About Us</a>
                         <a href="http://127.0.0.1:8000/contact" class="buttons">Contact Us</a>
@@ -171,19 +163,19 @@
                         <p>Trainers</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/boot.jpg" alt="" class="card-img">
+                        <img src="Images/boot.png" alt="" class="card-img">
                         <p>Boots</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/sandal.jpg" alt="" class="card-img">
+                        <img src="Images/sandal.png" alt="" class="card-img">
                         <p>Sandals</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/formal.jpg" alt="" class="card-img">
+                        <img src="Images/formal.png" alt="" class="card-img">
                         <p>Formal Shoes</p>
                     </div>
                     <div class="card" onclick="location.href='';">
-                        <img src="Images/converse.jpg" alt="" class="card-img">
+                        <img src="Images/converseshoes.png" alt="" class="card-img">
                         <p>Converse</p>
                     </div>
                 </div>
