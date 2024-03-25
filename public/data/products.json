@@ -1,0 +1,99 @@
+[
+    {
+        "id": 1,
+        "name":" New Balance 550",
+        "price": 105,
+        "image": "Images/image/New Balance 550 _White_Black_ Men's Shoe - Hibbett _ City Gear.png",
+        "description": "The New Balance 550 is a stylish sneaker with a retro-inspired design, featuring a comfortable fit and iconic branding.",
+        "stock": 50
+    },
+    {
+        "id": 2,
+        "name":" Nike Dunks Low Retro",
+        "price": 85,
+        "image": "Images/image/Men's Dunk Low Retro Premium Split - Deep Jungle White Silver _ 9_5.png",
+        "description": "The Nike Dunks Low Retro sneakers are a revival of the iconic basketball shoe, featuring a low-cut design, cushioned sole, and retro-inspired colorways, delivering style and comfort for casual wear.",
+        "stock": 50
+    },
+    {
+        "id": 3,
+        "name":" Adidas  OG Samba",
+        "price": 150,
+        "image": "Images/image/adidas Samba.png",
+        "description": "The Adidas OG Samba shoes are iconic sneakers with a classic soccer-inspired design, featuring a leather upper, suede overlays, and distinctive gum rubber outsole, offering timeless style and versatility for casual wear.",
+        "stock": 50
+    },
+    {
+        "id": 4,
+        "name":" Vans Checkered Slip-Ons",
+        "price": 80,
+        "image": "Images/image/Vans Skate Slip-On Shoes - (Checkerboard) Black _ Off White.png",
+        "description": "Vans Checkered Slip-Ons are iconic skate shoes known for their slip-on design and signature checkered pattern, offering effortless style and comfort for casual wear and skateboarding.",
+        "stock": 50
+    },
+    {
+        "id": 5,
+        "name":" Adidas Campus 00s Unisex",
+        "price": 90,
+        "image": "Images/image/adidas Campus 00s Shoes - Green _ Unisex Lifestyle _ adidas US.png",
+        "description": "The Adidas Campus 00s Unisex sneakers combine retro aesthetics with modern comfort, making them versatile and stylish footwear suitable for anyone, regardless of gender, offering timeless appeal and a comfortable fit for everyday wear.",
+        "stock": 50
+    },
+    {
+        "id": 6,
+        "name":" Reebook Club C",
+        "price": 75,
+        "image": "Images/image/Club C Revenge Vintage.png",
+        "description": "The Reebok Club C is a classic sneaker featuring a clean and timeless design, renowned for its versatility, comfort, and understated style, making it a popular choice for casual wear.",
+        "stock": 50
+    },
+    {
+        "id": 7,
+        "name":" Converse AS-1 Pro Ox Shoes",
+        "price": 87,
+        "image": "Images/image/Converse AS-1 Pro Ox Shoes - Black _ White _ Gum.png",
+        "description": "The Converse AS-1 Pro Ox Shoes offer a blend of classic style and modern performance, featuring a low-top silhouette, durable construction, and signature Converse branding, making them a versatile and stylish option for everyday wear.",
+        "stock": 50
+    },
+    {
+        "id": 8,
+        "name":" New Balance 1906D Unisex",
+        "price": 200,
+        "image": "Images/image/New Balance Unisex 1906D.png",
+        "description": "The New Balance 1906D Unisex shoes exude a blend of style and functionality, offering comfort and versatility for wearers of all genders. With a sleek design and durable construction, these sneakers are perfect for daily activities and casual outings.",
+        "stock": 50
+    },
+    {
+        "id": 9,
+        "name":" Birkenstock Lutry Clog",
+        "price": 82,
+        "image": "Images/image/Birkenstock Lutry Clog in Black, Men's at Urban Outfitters.png",
+        "description": "The Birkenstock Lutry Clog: Classic comfort meets modern style in a durable, versatile design.",
+        "stock": 50
+    },
+    {
+        "id": 10,
+        "name":" Converse Chuck Taylor",
+        "price": 95,
+        "image": "Images/image/Brown converse.png",
+        "description": "Converse Chuck Taylors: Timeless sneakers with an iconic silhouette, perfect for casual style.",
+        "stock": 50
+    },
+    {
+        "id": 11,
+        "name":" Nike Dunk Low PRM",
+        "price": 65,
+        "image": "Images/image/Dunk Low PRM Burgundy Crush Mens .png",
+        "description": "Nike Dunk Low PRM: Premium edition of the iconic silhouette, offering style and comfort in a sleek low-top design.",
+        "stock": 50
+    },
+    {
+        "id": 12,
+        "name":" Adidas Gazelle Unisex",
+        "price": 75,
+        "image": "Images/image/adidas Gazelle Italy Shoes - Blue _ Unisex Lifestyle _ adidas US.png",
+        "description": "Adidas Gazelle Unisex: Iconic sneakers blending retro style and modern comfort for all genders.",
+        "stock": 50
+    }
+
+]

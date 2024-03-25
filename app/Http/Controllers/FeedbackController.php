@@ -3,12 +3,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Feedback;
+use App\Http\Controllers\Controller;
+
 
 class FeedbackController extends Controller
 {
     public function create()
     {
-        return view('create');
+        $feedbacks =   Feedback::all(); // Fetch all feedback reviews from the database
+
+    return view('create', ['feedbacks' => $feedbacks]); // Pass the reviews data to the view
     }
 
     public function store(Request $request)

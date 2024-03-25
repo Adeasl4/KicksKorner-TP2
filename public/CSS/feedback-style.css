@@ -118,6 +118,15 @@ form button {
     background-color: #e0b807;
 }
 
+.feedback-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feedback-item {
+    margin-bottom: 20px; /* Adjust the spacing between reviews as needed */
+}
+
 
 hr{
   height: 1px;
