@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,42 +23,45 @@
 
         <div class="container">
             <p class="total-cost">Total Cost: $<span id="totalCost">0.00</span></p>
-            <button class="purchase-button" data-content="PURCHASE" onclick="validateForm()">PURCHASE</button>
+            <!-- Form for checkout -->
+            <form id="checkoutForm" method="POST" action="/checkout">
+                <!-- Hidden input to store total cost -->
+                <input type="hidden" name="total_cost" id="totalCostInput">
+                <button type="submit" class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+            </form>
         </div>
     </div>
 
     <div class="card-container">
-    <div class="mastercard">
-        <div class="logo"></div>
-        <div class="name">mastercard</div>
+        <div class="mastercard">
+            <div class="logo"></div>
+            <div class="name">mastercard</div>
+        </div>
+        <div class="visa">
+            <div class="logo"></div>
+            <div class="name">visa</div>
+        </div>
+        <div class="card-details">
+            <div class="card-number field">
+                <label for="cn">CARD NUMBER</label>
+                <input id="cn" type="text" pattern="\d{16}" title="Card number must be 16 digits." placeholder="1234123412341234" required />
+            </div>
+            <div class="card-name field">
+                <label for="cna">NAME ON CARD</label>
+                <input id="cna" type="text" required />
+            </div>
+            <div class="expires field">
+                <label for="exp">EXPIRES</label>
+                <input id="exp" type="text" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Expiration date must be in MM/YY format." placeholder="MM/YY" required />
+            </div>
+            <div class="cvc field">
+                <label for="cvc">CVC</label>
+                <input id="cvc" type="text" pattern="\d{3,4}" title="CVC must be 3 or 4 digits." placeholder="123" required />
+            </div>
+        </div>
     </div>
-    <div class="visa">
-        <div class="logo"></div>
-        <div class="name">visa</div>
-    </div>
-    <div class="card-details">
-        <div class="card-number field">
-            <label for="cn">CARD NUMBER</label>
-            <input id="cn" type="text" pattern="\d{16}" title="Card number must be 16 digits." placeholder="1234123412341234" required />
-        </div>
-        <div class="card-name field">
-            <label for="cna">NAME ON CARD</label>
-            <input id="cna" type="text" required />
-        </div>
-        <div class="expires field">
-            <label for="exp">EXPIRES</label>
-            <input id="exp" type="text" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Expiration date must be in MM/YY format." placeholder="MM/YY" required />
-        </div>
-        <div class="cvc field">
-            <label for="cvc">CVC</label>
-            <input id="cvc" type="text" pattern="\d{3,4}" title="CVC must be 3 or 4 digits." placeholder="123" required />
-        </div>
-    </div>
-</div>
 
-
-<div id="customModal" class="custom-modal">
-   
+    <div id="customModal" class="custom-modal"></div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -87,12 +89,11 @@ function displayCartItems() {
                 document.getElementById('cartItems').appendChild(cartItemDiv);
                 totalCost += productDetails.price * cartItem.quantity;
                 document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+                // Set the total cost in the hidden input field
+                document.getElementById('totalCostInput').value = totalCost.toFixed(2);
             }
         });
     });
-
-    // Updating the total cost
-    document.getElementById('totalCost').textContent = totalCost.toFixed(2);
 }
 
 function fetchProducts() {
@@ -107,30 +108,14 @@ purchaseButton.addEventListener('click', function() {
     const orderNumber = Math.floor(Math.random() * 90000) + 10000; // Simple random order number generation
     alert('Thank you for your purchase! Your order number is ' + orderNumber);
 
-    // Prepare data for checkout
-    const carts = JSON.parse(localStorage.getItem('cart')) || [];
-    const checkoutData = {
-        total_price: parseFloat(document.getElementById('totalCost').textContent), // Example total price
-        products: carts
-    };
-
-    // Send checkout data to the server
-    fetch('/checkout', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(checkoutData)
-    })
-    .then(response => response.json())
-    .then(data => console.log(data.message))
-    .catch(error => console.error('Error:', error));
+    // Submit the form when the purchase button is clicked
+    document.getElementById('checkoutForm').submit();
 });
 </script>
 
-
 </body>
 </html>
+
 
 
 
