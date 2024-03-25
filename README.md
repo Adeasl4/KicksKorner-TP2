@@ -1,5 +1,27 @@
 Link Original TP1 Repository: https://github.com/CoderMustafa1/kickskorner/tree/main
 
+## How to run and use our code:
+
+1. Clone the repo
+
+```git clone --branch master https://github.com/Adeasl4/KicksKorner-TP2.git```
+
+2. Install Composer packages and enable the required extensions within the php folder and in the php.ini file or it could just php for you i.e. sqlite:
+
+```composer install```
+
+3. Copy the env file and edit it appropriately
+
+```cp .env.example .env```
+
+4. Ensure that the DB_CONNECTION in your .env file is set to sqlite.
+
+   Create an empty database file, do this manually or you can run (below command is for windows OS)
+
+```type nul > \database\database.sqlite```
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
