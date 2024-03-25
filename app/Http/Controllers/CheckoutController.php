@@ -3,20 +3,49 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Order; // Assuming you have an Order model
+use App\Models\Checkout; 
+use Illuminate\Support\Facades\Session; 
+
 
 class CheckoutController extends Controller
 {
+
     public function processCheckout(Request $request)
     {
-        // Your logic for processing the checkout and saving the order
+        // Validate the request data
+        $validatedData = $request->validate([
+            'total_cost' => 'required|numeric',
+            'product_ids' => 'required|array',
+            'product_ids.*' => 'required|exists:products,id',
+            'quantities' => 'required|array',
+            'quantities.*' => 'required|integer|min:1',
+        ]);
+    
+        try {
+            // Create Checkout records based on the submitted data
+            foreach ($validatedData['product_ids'] as $key => $productId) {
+                $checkout = new Checkout();
+                $checkout->product_id = $productId;
+                $checkout->quantity = $validatedData['quantities'][$key];
+                $checkout->total_price = $validatedData['total_cost'];
+                $checkout->save();
+            }
+            
+        // Flash success message to session
+        Session::flash('success', 'Order placed successfully');
 
-        // Example: Saving the order
-        $order = new Order();
-        $order->order_number = generateOrderNumber(); // You need to define this function
-        $order->save();
-
-        // Return the order number as JSON response
-        return response()->json(['order_number' => $order->order_number]);
+        // Redirect back to the homepage
+        return redirect()->route('home.page');
+    } catch (\Exception $e) {
+        // Log the error
+        \Log::error('Checkout failed: ' . $e->getMessage());
+        // Redirect back with error message
+        return redirect()->back()->with('error', 'Checkout failed: ' . $e->getMessage());
     }
+    }
+    
+    
+    
+    
+
 }

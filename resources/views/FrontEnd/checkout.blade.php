@@ -1,6 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style3.css">  
+    <script src="https://kit.fontawesome.com/26f8ed069f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="product-container" style="background: #ffff00;">
+        <div class="details">
+            <h1 class="cost">Secure Payments</h1>
+            <h3 class="title">KicksKorner</h3>
+        </div>
+
+       
+        <div id="cartItems" class="cart-items-container">
+            
+        </div>
+
+        <div class="container">
+            <p class="total-cost">Total Cost: $<span id="totalCost">0.00</span></p>
+            <!-- Form for checkout -->
+            <form action="{{ route('checkout.process') }}" method="POST" id="checkoutForm">
+                <!-- Hidden input to store total cost -->
+                @csrf
+                <input type="hidden" name="total_cost" id="totalCostInput">
+                <button type="submit" class="purchase-button" data-content="PURCHASE">PURCHASE</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="mastercard">
+            <div class="logo"></div>
+            <div class="name">mastercard</div>
+        </div>
+        <div class="visa">
+            <div class="logo"></div>
+            <div class="name">visa</div>
+        </div>
+        <div class="card-details">
+            <div class="card-number field">
+                <label for="cn">CARD NUMBER</label>
+                <input id="cn" type="text" pattern="\d{16}" title="Card number must be 16 digits." placeholder="1234123412341234" required />
+            </div>
+            <div class="card-name field">
+                <label for="cna">NAME ON CARD</label>
+                <input id="cna" type="text" required />
+            </div>
+            <div class="expires field">
+                <label for="exp">EXPIRES</label>
+                <input id="exp" type="text" pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" title="Expiration date must be in MM/YY format." placeholder="MM/YY" required />
+            </div>
+            <div class="cvc field">
+                <label for="cvc">CVC</label>
+                <input id="cvc" type="text" pattern="\d{3,4}" title="CVC must be 3 or 4 digits." placeholder="123" required />
+            </div>
+        </div>
+    </div>
+
+    <div id="customModal" class="custom-modal"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    displayCartItems();
+});
+
+function displayCartItems() {
+    let carts = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalCost = 0;
+
+    carts.forEach(function(cartItem) {
+        fetchProducts().then(products => {
+            const productDetails = products.find(p => p.id == cartItem.product_id);
+            if (productDetails) {
+                let cartItemDiv = document.createElement('div');
+                cartItemDiv.classList.add('cart-item');
+                cartItemDiv.innerHTML = `
+                    <img src="${productDetails.image}" alt="${productDetails.name}">
+                    <p>${productDetails.name} - $${productDetails.price} x ${cartItem.quantity}</p>
+                    <p>Total: $${(productDetails.price * cartItem.quantity).toFixed(2)}</p>
+                `;
+                document.getElementById('cartItems').appendChild(cartItemDiv);
+                totalCost += productDetails.price * cartItem.quantity;
+                document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+                // Set the total cost in the hidden input field
+                document.getElementById('totalCostInput').value = totalCost.toFixed(2);
+            }
+        });
+    });
+}
+
+function fetchProducts() {
+    return fetch('data/products.json').then(response => response.json());
+    return fetch('data/products-women.json').then(response => response.json());
+    return fetch('data/products-kids.json').then(response => response.json());
+}
+
+const purchaseButton = document.querySelector('.purchase-button');
+
+purchaseButton.addEventListener('click', function() {
+
+    const orderNumber = Math.floor(Math.random() * 90000) + 10000; // Simple random order number generation
+    alert('Thank you for your purchase! Your order number is ' + orderNumber);
+
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cartItems.forEach(item => {
+        // Extract product_id and quantity individually
+        const productId = item.product_id;
+        const quantity = item.quantity;
+
+        // Set the values of hidden inputs
+        const productIdInput = document.createElement('input');
+        productIdInput.type = 'hidden';
+        productIdInput.name = 'product_ids[]'; // Use an array to capture multiple product ids
+        productIdInput.value = productId;
+        document.getElementById('checkoutForm').appendChild(productIdInput);
+
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'hidden';
+        quantityInput.name = 'quantities[]'; // Use an array to capture multiple quantities
+        quantityInput.value = quantity;
+        document.getElementById('checkoutForm').appendChild(quantityInput);
+    });
+
+    // Submit the form when the purchase button is clicked
+    document.getElementById('checkoutForm').submit();
+});
+</script>
+
+</body>
+</html>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- working code 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -144,6 +307,7 @@ document.querySelector('.purchase-button').addEventListener('click', function() 
 </body>
 </html>
 
+-->
 
 
 
