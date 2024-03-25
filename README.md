@@ -25,7 +25,7 @@ cp .env.example .env
    Create an empty database file, do this manually or you can run (below command is for windows OS)
 
 ```
-type nul > \database\database.sqlite
+type nul > database\database.sqlite
 ```
 
  Before you run ```composer install``` in your IDE terminal make sure you run the above command or you will into an error, if done correctly it will create a database.sqlite file in the database folder and then you can ```composer install```
